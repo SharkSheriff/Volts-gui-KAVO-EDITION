@@ -2536,3 +2536,13 @@ end)
 VsecondSection:NewButton("Fe Hax Gui", "ButtonInfo", function()
     loadstring(game:HttpGetAsync("https://pastebin.com/raw/Kcj0J4wb"))()
 end)
+VsecondSection:NewButton("Lucky blocks", "ButtonInfo", function()
+    for i = 1, 1000 do
+        game:GetService("ReplicatedStorage").SpawnGalaxyBlock:FireServer()
+        game:GetService("ReplicatedStorage").SpawnRainbowBlock:FireServer()
+        game:GetService("ReplicatedStorage").SpawnDiamondBlock:FireServer()
+        end
+end)
+VsecondSection:NewButton("BAN GUI", "ButtonInfo", function()
+    loadstring(game:HttpGet(("https://raw.githubusercontent.com/Tech-187/Lua-scripts/refs/heads/main/Ban%20GUI.lua"),true))()
+end)
