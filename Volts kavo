@@ -1,0 +1,2538 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Volts gui NO SKID", "BloodTheme")
+
+local VoltsTab = Window:NewTab("VoltsTab")
+local VoltsSection = VoltsTab:NewSection("VoltsSection")
+VoltsSection:NewTextBox("Kill player", "TextboxInfo", function(txt)
+	
+    local targetPlayer = game.Players:FindFirstChild(txt)
+    if targetPlayer then
+        local localitem = game.Players.LocalPlayer.Backpack["Reach Tool"]
+        --local localitemchar = game.Players.LocalPlayer.Character["Reach Tool"]
+        local backpack = game.Players.LocalPlayer.Backpack
+        local localPlayerChar = game.Players.LocalPlayer.Character
+        local localPlayerHum =  game.Players.LocalPlayer.Character.HumanoidRootPart
+        local playerChar = targetPlayer.Character
+        local mypos = localPlayerHum.Position
+
+        if localPlayerChar and playerChar then
+            local targetHumanoidRootPart = playerChar:FindFirstChild("HumanoidRootPart")
+            local localHumanoidRootPart = localPlayerChar:FindFirstChild("HumanoidRootPart")
+            
+
+            if targetHumanoidRootPart and localHumanoidRootPart then
+                workspace.Gravity = 0
+                localPlayerHum.CFrame = CFrame.new(9999999, 9999999, 9999999)
+                localitem.Parent = localPlayerChar
+                wait(0)
+                for i = 1, 30 do
+                    targetHumanoidRootPart.CFrame = localHumanoidRootPart.CFrame
+                    task.wait(0)
+                end
+                wait(0.6)
+                localPlayerHum.CFrame = CFrame.new(mypos)
+                workspace.Gravity = 196.2
+                local localitemchar = game.Players.LocalPlayer.Character:WaitForChild("Reach Tool")
+                localitemchar.Parent = backpack
+            end
+        end
+    else
+        print("Player not found!")
+    end
+end)
+VoltsSection:NewButton("Infinite yield", "ButtonInfo", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+VoltsSection:NewButton("Mexicokiddgui v2", "ButtonInfo", function()
+    --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+-- mexicokiddgui
+-- Version:v.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local decalspam = Instance.new("TextButton")
+local decalspam_2 = Instance.new("TextButton")
+local TextLabel_3 = Instance.new("TextLabel")
+local DESTROYYYYYYY = Instance.new("TextButton")
+local decalspam_3 = Instance.new("TextButton")
+local decalspam_4 = Instance.new("TextButton")
+local decalspam_5 = Instance.new("TextButton")
+local decalspam_6 = Instance.new("TextButton")
+local decalspam_7 = Instance.new("TextButton")
+local decalspam_8 = Instance.new("TextButton")
+local decalspam_9 = Instance.new("TextButton")
+local decalspam_10 = Instance.new("TextButton")
+local decalspam_11 = Instance.new("TextButton")
+local decalspam_12 = Instance.new("TextButton")
+local decalspam_13 = Instance.new("TextButton")
+local decalspam_14 = Instance.new("TextButton")
+local decalspam_15 = Instance.new("TextButton")
+local decalspam_16 = Instance.new("TextButton")
+local decalspam_17 = Instance.new("TextButton")
+local decalspam_18 = Instance.new("TextButton")
+local decalspam_19 = Instance.new("TextButton")
+local decalspam_20 = Instance.new("TextButton")
+local decalspam_21 = Instance.new("TextButton")
+local Frame = Instance.new("Frame")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+
+ScrollingFrame.Parent = ScreenGui
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.BorderColor3 = Color3.fromRGB(255, 0, 0)
+ScrollingFrame.BorderSizePixel = 4
+ScrollingFrame.Position = UDim2.new(0.0694835708, 0, 0.0711382106, 0)
+ScrollingFrame.Size = UDim2.new(0, 462, 0, 399)
+
+TextLabel.Parent = ScrollingFrame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel.Position = UDim2.new(0.272000015, 0, 0.0189999994, 0)
+TextLabel.Size = UDim2.new(0, 170, 0, 32)
+TextLabel.Font = Enum.Font.Arial
+TextLabel.Text = "MexicokiddGui v2"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = TextLabel
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextLabel_2.Position = UDim2.new(-0.00465017557, 0, 0.977094233, 0)
+TextLabel_2.Size = UDim2.new(0, 170, 0, 32)
+TextLabel_2.Font = Enum.Font.Arial
+TextLabel_2.Text = "by @Mexicokidd"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+decalspam.Name = "decal spam"
+decalspam.Parent = TextLabel_2
+decalspam.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
+decalspam.BorderColor3 = Color3.fromRGB(0, 0, 0)
+decalspam.BorderSizePixel = 0
+decalspam.Position = UDim2.new(-0.543097973, 0, 2.54024172, 0)
+decalspam.Size = UDim2.new(0, 129, 0, 50)
+decalspam.Font = Enum.Font.Arial
+decalspam.Text = "decal spam"
+decalspam.TextColor3 = Color3.fromRGB(255, 255, 255)
+decalspam.TextSize = 23.000
+
+decalspam_2.Name = "decal spam"
+decalspam_2.Parent = TextLabel_2
+decalspam_2.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
+decalspam_2.BorderColor3 = Color3.fromRGB(232, 55, 37)
+decalspam_2.BorderSizePixel = 3
+decalspam_2.Position = UDim2.new(0.333372593, 0, 13.7902412, 0)
+decalspam_2.Size = UDim2.new(0, 86, 0, 50)
+decalspam_2.Font = Enum.Font.Arial
+decalspam_2.Text = "c00lkidd"
+decalspam_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+decalspam_2.TextSize = 23.000
+
+TextLabel_3.Parent = decalspam_2
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(-0.721137464, 0, 1.1906451, 0)
+TextLabel_3.Size = UDim2.new(0, 200, 0, 23)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Music"
+TextLabel_3.TextColor3 = Color3.fromRGB(245, 230, 230)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+DESTROYYYYYYY.Name = "DESTROYYYYYYY"
+DESTROYYYYYYY.Parent = TextLabel_2
+DESTROYYYYYYY.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
+DESTROYYYYYYY.BorderColor3 = Color3.fromRGB(11, 22, 230)
+DESTROYYYYYYY.BorderSizePixel = 0
+DESTROYYYYYYY.Position = UDim2.new(-0.543097973, 0, 11.5089912, 0)
+DESTROYYYYYYY.Size = UDim2.new(0, 377, 0, 50)
+DESTROYYYYYYY.Font = Enum.Font.Arial
+DESTROYYYYYYY.Text = "DESTTROOYY!?!?!?? 1"
+DESTROYYYYYYY.TextColor3 = Color3.fromRGB(255, 255, 255)
+DESTROYYYYYYY.TextSize = 23.000
+
+decalspam_3.Name = "decal spam"
+decalspam_3.Parent = TextLabel_2
+decalspam_3.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
+decalspam_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+decalspam_3.BorderSizePixel = 0
+decalspam_3.Position = UDim2.new(0.256902009, 0, 2.54024172, 0)
+decalspam_3.Size = UDim2.new(0, 46, 0, 50)
+decalspam_3.Font = Enum.Font.Arial
+decalspam_3.Text = "Skybox 1"
+decalspam_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+decalspam_3.TextScaled = true
+decalspam_3.TextSize = 23.000
+decalspam_3.TextWrapped = true
+
+decalspam_4.Name = "decal spam"
+decalspam_4.Parent = TextLabel_2
+decalspam_4.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
+decalspam_4.BorderColor3 = Color3.fromRGB(11, 22, 230)
+decalspam_4.BorderSizePixel = 0
+decalspam_4.Position = UDim2.new(0.292196125, 0, 9.22774124, 0)
+decalspam_4.Size = UDim2.new(0, 93, 0, 50)
+decalspam_4.Font = Enum.Font.Arial
+decalspam_4.Text = "message"
+decalspam_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+decalspam_4.TextSize = 23.000
+
+decalspam_5.Name = "decal spam"
+decalspam_5.Parent = TextLabel_2
+decalspam_5.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
+decalspam_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+decalspam_5.BorderSizePixel = 0
+decalspam_5.Position = UDim2.new(-0.543097973, 0, 17.0089912, 0)
+decalspam_5.Size = UDim2.new(0, 99, 0, 50)
+decalspam_5.Font = Enum.Font.Arial
+decalspam_5.Text = "Theme"
+decalspam_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+decalspam_5.TextSize = 23.000
+
+decalspam_6.Name = "decal spam"
+decalspam_6.Parent = TextLabel_2
+decalspam_6.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
+decalspam_6.BorderColor3 = Color3.fromRGB(11, 22, 230)
+decalspam_6.BorderSizePixel = 0
+decalspam_6.Position = UDim2.new(-0.543097973, 0, 9.22774124, 0)
+decalspam_6.Size = UDim2.new(0, 129, 0, 50)
+decalspam_6.Font = Enum.Font.Arial
+decalspam_6.Text = "hint 4"
+decalspam_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+decalspam_6.TextSize = 23.000
+
+decalspam_7.Name = "decal spam"
+decalspam_7.Parent = TextLabel_2
+decalspam_7.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
+decalspam_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+decalspam_7.BorderSizePixel = 0
+decalspam_7.Position = UDim2.new(0.586313784, 0, 2.54024172, 0)
+decalspam_7.Size = UDim2.new(0, 43, 0, 50)
+decalspam_7.Font = Enum.Font.Arial
+decalspam_7.Text = "Skybox 2"
+decalspam_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+decalspam_7.TextScaled = true
+decalspam_7.TextSize = 23.000
+decalspam_7.TextWrapped = true
+
+decalspam_8.Name = "decal spam"
+decalspam_8.Parent = TextLabel_2
+decalspam_8.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
+decalspam_8.BorderColor3 = Color3.fromRGB(11, 22, 230)
+decalspam_8.BorderSizePixel = 0
+decalspam_8.Position = UDim2.new(0.915725529, 0, 7.13399172, 0)
+decalspam_8.Size = UDim2.new(0, 129, 0, 50)
+decalspam_8.Font = Enum.Font.Arial
+decalspam_8.Text = "hint 3"
+decalspam_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+decalspam_8.TextSize = 23.000
+
+decalspam_9.Name = "decal spam"
+decalspam_9.Parent = TextLabel_2
+decalspam_9.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
+decalspam_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+decalspam_9.BorderSizePixel = 0
+decalspam_9.Position = UDim2.new(0.915725529, 0, 2.54024172, 0)
+decalspam_9.Size = UDim2.new(0, 129, 0, 50)
+decalspam_9.Font = Enum.Font.Arial
+decalspam_9.Text = "Jumpscare"
+decalspam_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+decalspam_9.TextSize = 23.000
+
+decalspam_10.Name = "decal spam"
+decalspam_10.Parent = TextLabel_2
+decalspam_10.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
+decalspam_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+decalspam_10.BorderSizePixel = 0
+decalspam_10.Position = UDim2.new(-0.543097973, 0, 4.79024172, 0)
+decalspam_10.Size = UDim2.new(0, 129, 0, 50)
+decalspam_10.Font = Enum.Font.Arial
+decalspam_10.Text = "Disco"
+decalspam_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+decalspam_10.TextSize = 23.000
+
+decalspam_11.Name = "decal spam"
+decalspam_11.Parent = TextLabel_2
+decalspam_11.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
+decalspam_11.BorderColor3 = Color3.fromRGB(11, 22, 230)
+decalspam_11.BorderSizePixel = 0
+decalspam_11.Position = UDim2.new(0.915725529, 0, 9.22774124, 0)
+decalspam_11.Size = UDim2.new(0, 129, 0, 50)
+decalspam_11.Font = Enum.Font.Arial
+decalspam_11.Text = "skeleton"
+decalspam_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+decalspam_11.TextSize = 23.000
+
+decalspam_12.Name = "decal spam"
+decalspam_12.Parent = TextLabel_2
+decalspam_12.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
+decalspam_12.BorderColor3 = Color3.fromRGB(11, 22, 230)
+decalspam_12.BorderSizePixel = 0
+decalspam_12.Position = UDim2.new(0.274549067, 0, 4.79024172, 0)
+decalspam_12.Size = UDim2.new(0, 96, 0, 50)
+decalspam_12.Font = Enum.Font.Arial
+decalspam_12.Text = "unanchor"
+decalspam_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+decalspam_12.TextSize = 23.000
+
+decalspam_13.Name = "decal spam"
+decalspam_13.Parent = TextLabel_2
+decalspam_13.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
+decalspam_13.BorderColor3 = Color3.fromRGB(11, 22, 230)
+decalspam_13.BorderSizePixel = 0
+decalspam_13.Position = UDim2.new(0.915725529, 0, 13.7902412, 0)
+decalspam_13.Size = UDim2.new(0, 129, 0, 50)
+decalspam_13.Font = Enum.Font.Arial
+decalspam_13.Text = "Particles"
+decalspam_13.TextColor3 = Color3.fromRGB(255, 255, 255)
+decalspam_13.TextSize = 23.000
+
+decalspam_14.Name = "decal spam"
+decalspam_14.Parent = TextLabel_2
+decalspam_14.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
+decalspam_14.BorderColor3 = Color3.fromRGB(11, 22, 230)
+decalspam_14.BorderSizePixel = 0
+decalspam_14.Position = UDim2.new(0.915725529, 0, 4.79024172, 0)
+decalspam_14.Size = UDim2.new(0, 129, 0, 50)
+decalspam_14.Font = Enum.Font.Arial
+decalspam_14.Text = "666"
+decalspam_14.TextColor3 = Color3.fromRGB(255, 255, 255)
+decalspam_14.TextSize = 23.000
+
+decalspam_15.Name = "decal spam"
+decalspam_15.Parent = TextLabel_2
+decalspam_15.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
+decalspam_15.BorderColor3 = Color3.fromRGB(11, 22, 230)
+decalspam_15.BorderSizePixel = 0
+decalspam_15.Position = UDim2.new(0.274549067, 0, 7.13399172, 0)
+decalspam_15.Size = UDim2.new(0, 96, 0, 50)
+decalspam_15.Font = Enum.Font.Arial
+decalspam_15.Text = "hint 2"
+decalspam_15.TextColor3 = Color3.fromRGB(255, 255, 255)
+decalspam_15.TextSize = 23.000
+
+decalspam_16.Name = "decal spam"
+decalspam_16.Parent = TextLabel_2
+decalspam_16.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
+decalspam_16.BorderColor3 = Color3.fromRGB(11, 22, 230)
+decalspam_16.BorderSizePixel = 0
+decalspam_16.Position = UDim2.new(-0.543097973, 0, 7.13399172, 0)
+decalspam_16.Size = UDim2.new(0, 129, 0, 50)
+decalspam_16.Font = Enum.Font.Arial
+decalspam_16.Text = "hint 1"
+decalspam_16.TextColor3 = Color3.fromRGB(255, 255, 255)
+decalspam_16.TextSize = 23.000
+
+decalspam_17.Name = "decal spam"
+decalspam_17.Parent = TextLabel_2
+decalspam_17.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
+decalspam_17.BorderColor3 = Color3.fromRGB(253, 250, 249)
+decalspam_17.BorderSizePixel = 2
+decalspam_17.Position = UDim2.new(-0.543097973, 0, 13.7902412, 0)
+decalspam_17.Size = UDim2.new(0, 129, 0, 50)
+decalspam_17.Font = Enum.Font.Arial
+decalspam_17.Text = "friend decal"
+decalspam_17.TextColor3 = Color3.fromRGB(255, 255, 255)
+decalspam_17.TextSize = 23.000
+
+decalspam_18.Name = "decal spam"
+decalspam_18.Parent = TextLabel_2
+decalspam_18.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
+decalspam_18.BorderColor3 = Color3.fromRGB(0, 0, 0)
+decalspam_18.BorderSizePixel = 0
+decalspam_18.Position = UDim2.new(0.262784362, 0, 17.0089912, 0)
+decalspam_18.Size = UDim2.new(0, 99, 0, 50)
+decalspam_18.Font = Enum.Font.Arial
+decalspam_18.Text = "Theme 2"
+decalspam_18.TextColor3 = Color3.fromRGB(255, 255, 255)
+decalspam_18.TextSize = 23.000
+
+decalspam_19.Name = "decal spam"
+decalspam_19.Parent = TextLabel_2
+decalspam_19.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
+decalspam_19.BorderColor3 = Color3.fromRGB(0, 0, 0)
+decalspam_19.BorderSizePixel = 0
+decalspam_19.Position = UDim2.new(1.05101967, 0, 17.0089912, 0)
+decalspam_19.Size = UDim2.new(0, 99, 0, 50)
+decalspam_19.Font = Enum.Font.Arial
+decalspam_19.Text = "Theme 3"
+decalspam_19.TextColor3 = Color3.fromRGB(255, 255, 255)
+decalspam_19.TextSize = 23.000
+
+decalspam_20.Name = "decal spam"
+decalspam_20.Parent = TextLabel_2
+decalspam_20.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
+decalspam_20.BorderColor3 = Color3.fromRGB(0, 0, 0)
+decalspam_20.BorderSizePixel = 0
+decalspam_20.Position = UDim2.new(-0.543097973, 0, 19.3839912, 0)
+decalspam_20.Size = UDim2.new(0, 99, 0, 50)
+decalspam_20.Font = Enum.Font.Arial
+decalspam_20.Text = "Theme 4"
+decalspam_20.TextColor3 = Color3.fromRGB(255, 255, 255)
+decalspam_20.TextSize = 23.000
+
+decalspam_21.Name = "decal spam"
+decalspam_21.Parent = TextLabel_2
+decalspam_21.BackgroundColor3 = Color3.fromRGB(2, 2, 2)
+decalspam_21.BorderColor3 = Color3.fromRGB(11, 22, 230)
+decalspam_21.BorderSizePixel = 0
+decalspam_21.Position = UDim2.new(1.33337259, 0, -0.584758759, 0)
+decalspam_21.Size = UDim2.new(0, 93, 0, 50)
+decalspam_21.Font = Enum.Font.Arial
+decalspam_21.Text = "message"
+decalspam_21.TextColor3 = Color3.fromRGB(255, 255, 255)
+decalspam_21.TextSize = 23.000
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 9.000
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Size = UDim2.new(0, 100, 0, 100)
+
+-- Scripts:
+
+local function ABACMN_fake_script() -- ScrollingFrame.Drag Gui Script 
+	local script = Instance.new('LocalScript', ScrollingFrame)
+
+	function dragify(Main)
+	dragToggle = nil
+	dragSpeed = 0.95 -- You can edit this.
+	dragInput = nil
+	dragStart = nil
+	dragPos = nil
+	
+	function updateInput(input)
+	Delta = input.Position - dragStart
+	Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	game:GetService("TweenService"):Create(Main, TweenInfo.new(.25), {Position = Position}):Play()
+	end
+	
+	Main.InputBegan:Connect(function(input)
+	if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then
+	dragToggle = true
+	dragStart = input.Position
+	startPos = Main.Position
+	input.Changed:Connect(function()
+	if (input.UserInputState == Enum.UserInputState.End) then
+	dragToggle = false
+	end
+	end)
+	end
+	end)
+	
+	Main.InputChanged:Connect(function(input)
+	if (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+	dragInput = input
+	end
+	end)
+	
+	game:GetService("UserInputService").InputChanged:Connect(function(input)
+	if (input == dragInput and dragToggle) then
+	updateInput(input)
+	end
+	end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(ABACMN_fake_script)()
+local function AWBJE_fake_script() -- decalspam.Script 
+	local script = Instance.new('Script', decalspam)
+
+	function click()
+		function exPro(root)
+			for _, v in pairs(root:GetChildren()) do
+				if v:IsA("Decal") and v.Texture ~= "http://www.roblox.com/asset/?id=113627311334804" then
+					v.Parent = nil
+				elseif v:IsA("BasePart") then
+					v.Material = "Plastic"
+					v.Transparency = 0
+					local One = Instance.new("Decal", v)
+					local Two = Instance.new("Decal", v)
+					local Three = Instance.new("Decal", v)
+					local Four = Instance.new("Decal", v)
+					local Five = Instance.new("Decal", v)
+					local Six = Instance.new("Decal", v)
+					One.Texture = "http://www.roblox.com/asset/?id=113627311334804"
+					Two.Texture = "http://www.roblox.com/asset/?id=113627311334804"
+					Three.Texture = "http://www.roblox.com/asset/?id=113627311334804"
+					Four.Texture = "http://www.roblox.com/asset/?id=113627311334804"
+					Five.Texture = "http://www.roblox.com/asset/?id=113627311334804"
+					Six.Texture = "http://www.roblox.com/asset/?id=113627311334804"--put your id here
+					One.Face = "Front"
+					Two.Face = "Back"
+					Three.Face = "Right"
+					Four.Face = "Left"
+					Five.Face = "Top"
+					Six.Face = "Bottom"
+				end
+				exPro(v)
+			end
+		end
+		function asdf(root)
+			for _, v in pairs(root:GetChildren()) do
+				asdf(v)
+			end
+		end
+		exPro(game.Workspace)
+		asdf(game.Workspace)
+	end
+	
+	script.Parent.MouseButton1Down:connect(click)
+end
+coroutine.wrap(AWBJE_fake_script)()
+local function QOPJ_fake_script() -- decalspam.Script 
+	local script = Instance.new('Script', decalspam)
+
+	
+end
+coroutine.wrap(QOPJ_fake_script)()
+local function FNYGP_fake_script() -- decalspam_2.Script 
+	local script = Instance.new('Script', decalspam_2)
+
+	function click()
+		function exPro(root)
+			for _, v in pairs(root:GetChildren()) do
+				if v:IsA("Decal") and v.Texture ~= "http://www.roblox.com/asset/?id=10560525674" then
+					v.Parent = nil
+				elseif v:IsA("BasePart") then
+					v.Material = "Plastic"
+					v.Transparency = 0
+					local One = Instance.new("Decal", v)
+					local Two = Instance.new("Decal", v)
+					local Three = Instance.new("Decal", v)
+					local Four = Instance.new("Decal", v)
+					local Five = Instance.new("Decal", v)
+					local Six = Instance.new("Decal", v)
+					One.Texture = "http://www.roblox.com/asset/?id=10560525674"
+					Two.Texture = "http://www.roblox.com/asset/?id=10560525674"
+					Three.Texture = "http://www.roblox.com/asset/?id=10560525674"
+					Four.Texture = "http://www.roblox.com/asset/?id=10560525674"
+					Five.Texture = "http://www.roblox.com/asset/?id=10560525674"
+					Six.Texture = "http://www.roblox.com/asset/?id=10560525674"
+					One.Face = "Front"
+					Two.Face = "Back"
+					Three.Face = "Right"
+					Four.Face = "Left"
+					Five.Face = "Top"
+					Six.Face = "Bottom"
+				end
+				exPro(v)
+			end
+		end
+		function asdf(root)
+			for _, v in pairs(root:GetChildren()) do
+				asdf(v)
+			end
+		end
+		exPro(game.Workspace)
+		asdf(game.Workspace)
+	end
+	
+	script.Parent.MouseButton1Down:connect(click)
+end
+coroutine.wrap(FNYGP_fake_script)()
+local function HVJS_fake_script() -- decalspam_2.Script 
+	local script = Instance.new('Script', decalspam_2)
+
+	function click()
+		s = Instance.new("Sky")
+		s.Name = "Sky"
+		s.Parent = game.Lighting
+		s.SkyboxBk = "http://www.roblox.com/asset/?id=10560525674"
+		s.SkyboxDn = "http://www.roblox.com/asset/?id=10560525674"
+		s.SkyboxFt = "http://www.roblox.com/asset/?id=10560525674"
+		s.SkyboxLf = "http://www.roblox.com/asset/?id=10560525674"
+		s.SkyboxRt = "http://www.roblox.com/asset/?id=10560525674"
+		s.SkyboxUp = "http://www.roblox.com/asset/?id=10560525674"
+		game.Lighting.TimeOfDay = 12
+	end
+	
+	script.Parent.MouseButton1Down:connect(click)
+end
+coroutine.wrap(HVJS_fake_script)()
+local function JMGTBOM_fake_script() -- DESTROYYYYYYY.Script 
+	local script = Instance.new('Script', DESTROYYYYYYY)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		wait(1)
+		math.randomseed(tick() % 1 * 1e6)
+		sky = coroutine.create(function()
+			while wait(0.3) do
+				s = Instance.new("Sky",game.Lighting)
+				s.SkyboxBk,s.SkyboxDn,s.SkyboxFt,s.SkyboxLf,s.SkyboxRt,s.SkyboxUp = "rbxassetid://201208408","rbxassetid://201208408","rbxassetid://201208408","rbxassetid://201208408","rbxassetid://201208408","rbxassetid://201208408"
+				s.CelestialBodiesShown = true
+			end
+		end)
+	
+	
+		local m = Instance.new("Hint", game.workspace)
+		m.Text = " 1-0--12-35443-43434-43-33--3"
+	
+		del = coroutine.create(function()
+			while wait(0.3) do
+				for i,v in pairs(workspace:GetChildren()) do
+					if v:IsA("Model") then
+						v:Destroy()
+					end
+				end
+			end
+		end)
+	
+	
+	
+		for i,v in pairs(game.Players:GetChildren()) do
+			v.Character.Archivable = true
+		end
+	
+		noises = {'rbxassetid://230287740','rbxassetid://271787597','rbxassetid://153752123','rbxassetid://271787503'}
+	
+		sound = coroutine.create(function()
+			a = Instance.new("Sound",workspace)
+			a.SoundId = "rbxassetid://6783714255"
+			a.Name = "RAINING MEN"
+			a.Volume = 58359
+			a.Looped = true
+			a:Play()
+			while wait(0.2) do
+				rainin = workspace:FindFirstChild("RAINING MEN")
+				if not rainin then
+					a = Instance.new("Sound",workspace)
+					a.SoundId = "rbxassetid://6942391979"
+					a.Name = "RAINING MEN"
+					a.Volume = 58359
+					a.Looped = true
+					a:Play()
+				end
+			end
+		end)
+	
+		msg = coroutine.create(function()
+			while wait(0.4) do
+				msg = Instance.new("Message",workspace)
+				msg.Text = "mexicokidd hacked this game lol!"
+				wait(0.4)
+				msg:Destroy()
+			end
+		end) 
+	
+	
+		rain = coroutine.create(function()
+			while wait(10 % 1 * 1e2) do
+				part = Instance.new("Part",workspace)
+				part.Name = "Toad"
+	
+				mesh = Instance.new("SpecialMesh",part)
+	
+				sound = Instance.new("Sound",workspace)
+	
+				part.CanCollide = false
+				part.Size = Vector3.new(440,530,380)
+				part.Position = Vector3.new(math.random(-3000,1000),math.random(1,3000),math.random(-3000,3000))
+	
+				sound.SoundId = noises[math.random(1,#noises)]
+				sound:Play()
+				sound.Ended:connect(function()
+					sound:Destroy()
+				end)
+	
+	
+				mesh.MeshType = "FileMesh"
+				mesh.MeshId = "rbxassetid://1009824073"
+				mesh.TextureId = "rbxassetid://1009824086"
+			end
+		end)
+		coroutine.resume(sky)
+		coroutine.resume(del)
+		coroutine.resume(sound)
+		coroutine.resume(msg)
+		coroutine.resume(rain)
+	end)
+end
+coroutine.wrap(JMGTBOM_fake_script)()
+local function LBMJX_fake_script() -- decalspam_3.Script 
+	local script = Instance.new('Script', decalspam_3)
+
+	
+end
+coroutine.wrap(LBMJX_fake_script)()
+local function LKEQEY_fake_script() -- decalspam_3.Script 
+	local script = Instance.new('Script', decalspam_3)
+
+	function click()
+		s = Instance.new("Sky")
+		s.Name = "Sky"
+		s.Parent = game.Lighting
+		s.SkyboxBk = "http://www.roblox.com/asset/?id=113627311334804"
+		s.SkyboxDn = "http://www.roblox.com/asset/?id=113627311334804"
+		s.SkyboxFt = "http://www.roblox.com/asset/?id=113627311334804"
+		s.SkyboxLf = "http://www.roblox.com/asset/?id=113627311334804"
+		s.SkyboxRt = "http://www.roblox.com/asset/?id=113627311334804"
+		s.SkyboxUp = "http://www.roblox.com/asset/?id=113627311334804"--put id here
+		game.Lighting.TimeOfDay = 12
+	end
+	
+	script.Parent.MouseButton1Down:connect(click)
+end
+coroutine.wrap(LKEQEY_fake_script)()
+local function DTXLPZ_fake_script() -- decalspam_4.Script 
+	local script = Instance.new('Script', decalspam_4)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local o = Instance.new("Message",workspace)
+		o.Text = "MEXICOKIDD HACKED THE GAME"--put your message here
+		--all scripts are in the desc lol
+		wait(10)
+		o:Destroy()
+	end)
+end
+coroutine.wrap(DTXLPZ_fake_script)()
+local function SEEDNP_fake_script() -- decalspam_5.Script 
+	local script = Instance.new('Script', decalspam_5)
+
+	function onClick()
+		local tubers93		= Instance.new("Sound")
+		tubers93.Parent		= game:GetService("Workspace")
+		tubers93.SoundId		= "rbxassetid://1847661821"
+		tubers93.Playing		= true
+		tubers93.Looped		= true
+		tubers93.Pitch      = 0.5
+		tubers93.Volume		= 100000000000000000000000
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClick)
+end
+coroutine.wrap(SEEDNP_fake_script)()
+local function OHLEEBZ_fake_script() -- decalspam_6.Script 
+	local script = Instance.new('Script', decalspam_6)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local m = Instance.new("Hint", game.workspace)
+		m.Text = "⁷⨉ΙΨκ707ηδ"
+	end)
+end
+coroutine.wrap(OHLEEBZ_fake_script)()
+local function PDMHUN_fake_script() -- decalspam_7.Script 
+	local script = Instance.new('Script', decalspam_7)
+
+	
+end
+coroutine.wrap(PDMHUN_fake_script)()
+local function HQWVJ_fake_script() -- decalspam_7.Script 
+	local script = Instance.new('Script', decalspam_7)
+
+	function click()
+		s = Instance.new("Sky")
+		s.Name = "Sky"
+		s.Parent = game.Lighting
+		s.SkyboxBk = "http://www.roblox.com/asset/?id=118804679475226"
+		s.SkyboxDn = "http://www.roblox.com/asset/?id=118804679475226"
+		s.SkyboxFt = "http://www.roblox.com/asset/?id=118804679475226"
+		s.SkyboxLf = "http://www.roblox.com/asset/?id=118804679475226"
+		s.SkyboxRt = "http://www.roblox.com/asset/?id=118804679475226"
+		s.SkyboxUp = "http://www.roblox.com/asset/?id=118804679475226"
+		game.Lighting.TimeOfDay = 12
+	end
+	
+	script.Parent.MouseButton1Down:connect(click)
+end
+coroutine.wrap(HQWVJ_fake_script)()
+local function HRPKGXR_fake_script() -- decalspam_8.Script 
+	local script = Instance.new('Script', decalspam_8)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local m = Instance.new("Hint", game.workspace)
+		m.Text = "join team mexicokidd"
+	end)
+end
+coroutine.wrap(HRPKGXR_fake_script)()
+local function YMMVIMN_fake_script() -- decalspam_9.Script 
+	local script = Instance.new('Script', decalspam_9)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i,v in pairs(game.Players:GetPlayers()) do
+			if v.Name ~= me and not v.PlayerGui:FindFirstChild("Screamer") and v:FindFirstChild("PlayerGui") then
+				spawn(function()
+					local newgui = Instance.new("ScreenGui",v.PlayerGui)
+					newgui.Name = "Screamer"
+					local newimage = Instance.new("ImageLabel",newgui)
+					newimage.Image = "http://www.roblox.com/asset/?id=76878664119922"
+					newimage.Size = UDim2.new(1,1,1,1)
+					local s = Instance.new("Sound",newgui)
+					s.SoundId = "rbxassetid://9069609200"
+					s.Volume = 9999999999999999999999999999999999999
+					s.Looped = true
+					s:Play()
+					print("Screamed "..v.Name)
+					while wait(9) do
+	
+						newimage.Parent:Destroy()
+	
+					end
+				end)
+			end
+		end
+	end)
+end
+coroutine.wrap(YMMVIMN_fake_script)()
+local function HWFJ_fake_script() -- decalspam_10.Script 
+	local script = Instance.new('Script', decalspam_10)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local Lighting = game:GetService("Lighting")
+		local ColorCorrection = Instance.new("ColorCorrectionEffect", Lighting)
+	
+		function zigzag(X) 
+			return math.acos(math.cos(X*math.pi))/math.pi
+		end
+	
+		Counter = 0
+	
+		Lighting.TimeOfDay = "12:00"
+	
+		while wait(0.1) do 
+			ColorCorrection.TintColor = Color3.fromHSV(zigzag(Counter),1,1)
+			Lighting.Ambient = Color3.fromHSV(zigzag(Counter),1,1)
+			Counter += 0.01
+		end
+	end)
+end
+coroutine.wrap(HWFJ_fake_script)()
+local function NEOL_fake_script() -- decalspam_11.Script 
+	local script = Instance.new('Script', decalspam_11)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		imageOne="http://www.roblox.com/asset/?id=169585459"imageTwo="http://www.roblox.com/asset/?id=169585475"imageThree="http://www.roblox.com/asset/?id=169585485"imageFour="http://www.roblox.com/asset/?id=169585502"imageFive="http://www.roblox.com/asset/?id=169585515"imageSix="http://www.roblox.com/asset/?id=169585502"imageSeven="http://www.roblox.com/asset/?id=169585485"imageEight="http://www.roblox.com/asset/?id=169585475"Spooky=Instance.new("Sound",workspace)Spooky.Name="Spooky"Spooky.SoundId="rbxassetid://174270407"Spooky.Volume=15 Spooky.Looped=true Spooky:Play()Sky=Instance.new("Sky",game.Lighting)Sky.SkyboxBk=imageOne Sky.SkyboxDn=imageOne Sky.SkyboxFt=imageOne Sky.SkyboxLf=imageOne Sky.SkyboxRt=imageOne Sky.SkyboxUp=imageOne while true do Sky.SkyboxBk=imageOne Sky.SkyboxDn=imageOne Sky.SkyboxFt=imageOne Sky.SkyboxLf=imageOne Sky.SkyboxRt=imageOne Sky.SkyboxUp=imageOne wait(0.15)Sky.SkyboxBk=imageTwo Sky.SkyboxDn=imageTwo Sky.SkyboxFt=imageTwo Sky.SkyboxLf=imageTwo Sky.SkyboxRt=imageTwo Sky.SkyboxUp=imageTwo wait(0.15)Sky.SkyboxBk=imageThree Sky.SkyboxDn=imageThree Sky.SkyboxFt=imageThree Sky.SkyboxLf=imageThree Sky.SkyboxRt=imageThree Sky.SkyboxUp=imageThree wait(0.15)Sky.SkyboxBk=imageFour Sky.SkyboxDn=imageFour Sky.SkyboxFt=imageFour Sky.SkyboxLf=imageFour Sky.SkyboxRt=imageFour Sky.SkyboxUp=imageFour wait(0.15)Sky.SkyboxBk=imageFive Sky.SkyboxDn=imageFive Sky.SkyboxFt=imageFive Sky.SkyboxLf=imageFive Sky.SkyboxRt=imageFive Sky.SkyboxUp=imageFive wait(0.15)Sky.SkyboxBk=imageSix Sky.SkyboxDn=imageSix Sky.SkyboxFt=imageSix Sky.SkyboxLf=imageSix Sky.SkyboxRt=imageSix Sky.SkyboxUp=imageSix wait(0.15)Sky.SkyboxBk=imageSeven Sky.SkyboxDn=imageSeven Sky.SkyboxFt=imageSeven Sky.SkyboxLf=imageSeven Sky.SkyboxRt=imageSeven Sky.SkyboxUp=imageSeven wait(0.15)Sky.SkyboxBk=imageEight Sky.SkyboxDn=imageEight Sky.SkyboxFt=imageEight Sky.SkyboxLf=imageEight Sky.SkyboxRt=imageEight Sky.SkyboxUp=imageEight wait(0.15)end
+	end)
+end
+coroutine.wrap(NEOL_fake_script)()
+local function DUWKG_fake_script() -- decalspam_12.Script 
+	local script = Instance.new('Script', decalspam_12)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		for i,v in pairs(game.Workspace:GetDescendants()) do
+			if v:IsA("BasePart") then	
+				v.Anchored = false
+			end
+		end
+	
+	
+		for i,v in pairs(game.ReplicatedStorage:GetDescendants()) do
+			if v:IsA("BasePart") then
+				v.Anchored = false
+			end
+		end
+	
+	
+		for i,v in pairs(game.ReplicatedFirst:GetDescendants()) do
+			if v:IsA("BasePart") then
+				v.Anchored = false
+			end
+		end
+	end)
+end
+coroutine.wrap(DUWKG_fake_script)()
+local function VJLJV_fake_script() -- decalspam_13.Script 
+	local script = Instance.new('Script', decalspam_13)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.Players:GetChildren()) do
+			emit = Instance.new("ParticleEmitter")
+			emit.Parent = v.Character.Head
+			emit.Texture = "http://www.roblox.com/asset/?id=113627311334804"
+			emit.VelocitySpread = 100000
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.Players:GetChildren()) do
+			emit = Instance.new("ParticleEmitter")
+			emit.Parent = v.Character.Head
+			emit.Texture = "http://www.roblox.com/asset/?id=113627311334804"
+			emit.VelocitySpread = 100000
+		end
+	end)
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.Players:GetChildren()) do
+			emit = Instance.new("ParticleEmitter")
+			emit.Parent = v.Character.Head
+			emit.Texture = "http://www.roblox.com/asset/?id=113627311334804"
+			emit.VelocitySpread = 100000
+		end
+	end)
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.Players:GetChildren()) do
+			emit = Instance.new("ParticleEmitter")
+			emit.Parent = v.Character.Head
+			emit.Texture = "http://www.roblox.com/asset/?id=113627311334804"
+			emit.VelocitySpread = 100000
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.Players:GetChildren()) do
+			emit = Instance.new("ParticleEmitter")
+			emit.Parent = v.Character.Head
+			emit.Texture = "http://www.roblox.com/asset/?id=113627311334804"
+			emit.VelocitySpread = 100000
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.Players:GetChildren()) do
+			emit = Instance.new("ParticleEmitter")
+			emit.Parent = v.Character.Head
+			emit.Texture = "http://www.roblox.com/asset/?id=113627311334804"
+			emit.VelocitySpread = 100000
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.Players:GetChildren()) do
+			emit = Instance.new("ParticleEmitter")
+			emit.Parent = v.Character.Head
+			emit.Texture = "http://www.roblox.com/asset/?id=113627311334804"
+			emit.VelocitySpread = 100000
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.Players:GetChildren()) do
+			emit = Instance.new("ParticleEmitter")
+			emit.Parent = v.Character.Head
+			emit.Texture = "http://www.roblox.com/asset/?id=113627311334804"
+			emit.VelocitySpread = 100000
+		end
+	end)
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.Players:GetChildren()) do
+			emit = Instance.new("ParticleEmitter")
+			emit.Parent = v.Character.Head
+			emit.Texture = "http://www.roblox.com/asset/?id=113627311334804"
+			emit.VelocitySpread = 100000
+		end
+	end)
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.Players:GetChildren()) do
+			emit = Instance.new("ParticleEmitter")
+			emit.Parent = v.Character.Head
+			emit.Texture = "http://www.roblox.com/asset/?id=113627311334804"
+			emit.VelocitySpread = 100000
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.Players:GetChildren()) do
+			emit = Instance.new("ParticleEmitter")
+			emit.Parent = v.Character.Head
+			emit.Texture = "http://www.roblox.com/asset/?id=113627311334804"
+			emit.VelocitySpread = 100000
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.Players:GetChildren()) do
+			emit = Instance.new("ParticleEmitter")
+			emit.Parent = v.Character.Head
+			emit.Texture = "http://www.roblox.com/asset/?id=113627311334804"
+			emit.VelocitySpread = 100000
+		end
+	end)
+end
+coroutine.wrap(VJLJV_fake_script)()
+local function BWDV_fake_script() -- decalspam_14.Script 
+	local script = Instance.new('Script', decalspam_14)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i,v in next,workspace:children''do
+			if(v:IsA'BasePart')then
+				me=v;
+				bbg=Instance.new('BillboardGui',me);
+				bbg.Name='stuf';
+				bbg.Adornee=me;
+				bbg.Size=UDim2.new(2.5,0,2.5,0)
+				--bbg.StudsOffset=Vector3.new(0,2,0)
+				tlb=Instance.new'TextLabel';
+				tlb.Text='666 666 666 666 666 666';
+				tlb.Font='SourceSansBold';
+				tlb.FontSize='Size48';
+				tlb.TextColor3=Color3.new(1,0,0);
+				tlb.Size=UDim2.new(1.25,0,1.25,0);
+				tlb.Position=UDim2.new(-0.125,-22,-1.1,0);
+				tlb.BackgroundTransparency=1;
+				tlb.Parent=bbg;
+			end;end;
+		function xds(dd)
+			for i,v in next,dd:children''do
+				if(v:IsA'BasePart')then
+					v.BrickColor=BrickColor.new'Really black';
+					v.TopSurface='Smooth';
+					v.BottomSurface='Smooth';
+					s=Instance.new('SelectionBox',v);
+					s.Adornee=v;
+					s.Color=BrickColor.new'Really red';
+					a=Instance.new('PointLight',v);
+					a.Color=Color3.new(1,0,0);
+					a.Range=15;
+					a.Brightness=5;
+					f=Instance.new('Fire',v);
+					f.Size=19;
+					f.Heat=22;
+				end;
+	
+				local dec = 'http://www.roblox.com/asset/?id=19399245';
+				local fac = {'Front', 'Back', 'Left', 'Right', 'Top', 'Bottom'}
+				--coroutine.wrap(function()
+				--for ,_ in pairs(fac) do
+				--local ddec = Instance.new("Decal", v)
+				--ddec.Face = 
+				--ddec.Texture = dec
+				--end end)()
+				if #(v:GetChildren())>0 then
+					xds(v) 
+				end
+			end
+		end
+		xds(game.Workspace)
+	end)
+	
+end
+coroutine.wrap(BWDV_fake_script)()
+local function RXQOZ_fake_script() -- decalspam_15.Script 
+	local script = Instance.new('Script', decalspam_15)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local m = Instance.new("Hint", game.workspace)
+		m.Text = "238218381321983812382382813812838213821838128312"
+	end)
+end
+coroutine.wrap(RXQOZ_fake_script)()
+local function XACZYDW_fake_script() -- decalspam_16.Script 
+	local script = Instance.new('Script', decalspam_16)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		local function write(text,object)
+			if object:IsA("Hint") == true then
+				local count = object:FindFirstChild("Count")
+				if count == nil then
+					count = Instance.new("NumberValue")
+					count.Parent = object
+					count.Name = "Count"
+					count.Value = count.Value + 1
+				else
+					count.Value = count.Value + 1
+				end
+				local startcount = count.Value
+				for i = 1,#text do
+					if count.Value == startcount then
+						local letter = string.sub(text,i,i)
+						object.Text = string.sub(text,1,i)
+						wait(0.06)
+					else
+						break
+					end
+				end
+			end
+		end
+		local bro = Instance.new("Hint",workspace)
+		write("Lol Mexicokidd hacked this game",bro)
+	end)
+	
+	
+end
+coroutine.wrap(XACZYDW_fake_script)()
+local function FYQUN_fake_script() -- decalspam_17.Script 
+	local script = Instance.new('Script', decalspam_17)
+
+	function click()
+		function exPro(root)
+			for _, v in pairs(root:GetChildren()) do
+				if v:IsA("Decal") and v.Texture ~= "http://www.roblox.com/asset/?id=126623165610561" then
+					v.Parent = nil
+				elseif v:IsA("BasePart") then
+					v.Material = "Plastic"
+					v.Transparency = 0
+					local One = Instance.new("Decal", v)
+					local Two = Instance.new("Decal", v)
+					local Three = Instance.new("Decal", v)
+					local Four = Instance.new("Decal", v)
+					local Five = Instance.new("Decal", v)
+					local Six = Instance.new("Decal", v)
+					One.Texture = "http://www.roblox.com/asset/?id=126623165610561"
+					Two.Texture = "http://www.roblox.com/asset/?id=126623165610561"
+					Three.Texture = "http://www.roblox.com/asset/?id=126623165610561"
+					Four.Texture = "http://www.roblox.com/asset/?id=126623165610561"
+					Five.Texture = "http://www.roblox.com/asset/?id=126623165610561"
+					Six.Texture = "http://www.roblox.com/asset/?id=126623165610561"
+					One.Face = "Front"
+					Two.Face = "Back"
+					Three.Face = "Right"
+					Four.Face = "Left"
+					Five.Face = "Top"
+					Six.Face = "Bottom"
+				end
+				exPro(v)
+			end
+		end
+		function asdf(root)
+			for _, v in pairs(root:GetChildren()) do
+				asdf(v)
+			end
+		end
+		exPro(game.Workspace)
+		asdf(game.Workspace)
+	end
+	
+	script.Parent.MouseButton1Down:connect(click)
+end
+coroutine.wrap(FYQUN_fake_script)()
+local function FITOLO_fake_script() -- decalspam_17.Script 
+	local script = Instance.new('Script', decalspam_17)
+
+	function click()
+		s = Instance.new("Sky")
+		s.Name = "Sky"
+		s.Parent = game.Lighting
+		s.SkyboxBk = "http://www.roblox.com/asset/?id=126623165610561"
+		s.SkyboxDn = "http://www.roblox.com/asset/?id=126623165610561"
+		s.SkyboxFt = "http://www.roblox.com/asset/?id=126623165610561"
+		s.SkyboxLf = "http://www.roblox.com/asset/?id=126623165610561"
+		s.SkyboxRt = "http://www.roblox.com/asset/?id=126623165610561"
+		s.SkyboxUp = "http://www.roblox.com/asset/?id=126623165610561"
+		game.Lighting.TimeOfDay = 12
+	end
+	
+	script.Parent.MouseButton1Down:connect(click)
+end
+coroutine.wrap(FITOLO_fake_script)()
+local function FNLQXQG_fake_script() -- decalspam_18.Script 
+	local script = Instance.new('Script', decalspam_18)
+
+	function onClick()
+		local tubers93		= Instance.new("Sound")
+		tubers93.Parent		= game:GetService("Workspace")
+		tubers93.SoundId		= "rbxassetid://1839246711"
+		tubers93.Playing		= true
+		tubers93.Looped		= true
+		tubers93.Pitch      = 0.5
+		tubers93.Volume		= 100000000000000000000000
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClick)
+end
+coroutine.wrap(FNLQXQG_fake_script)()
+local function TNJBBOT_fake_script() -- decalspam_19.Script 
+	local script = Instance.new('Script', decalspam_19)
+
+	function onClick()
+		local tubers93		= Instance.new("Sound")
+		tubers93.Parent		= game:GetService("Workspace")
+		tubers93.SoundId		= "rbxassetid://9043827836"
+		tubers93.Playing		= true
+		tubers93.Looped		= true
+		tubers93.Pitch      = 0.5
+		tubers93.Volume		= 100000000000000000000000
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClick)
+end
+coroutine.wrap(TNJBBOT_fake_script)()
+local function FNEWWH_fake_script() -- decalspam_20.Script 
+	local script = Instance.new('Script', decalspam_20)
+
+	function onClick()
+		local tubers93		= Instance.new("Sound")
+		tubers93.Parent		= game:GetService("Workspace")
+		tubers93.SoundId		= "rbxassetid://9043827836"
+		tubers93.Playing		= true
+		tubers93.Looped		= true
+		tubers93.Pitch      = 1
+		tubers93.Volume		= 100000000000000000000000
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClick)
+end
+coroutine.wrap(FNEWWH_fake_script)()
+local function PBCDZ_fake_script() -- decalspam_21.Script 
+	local script = Instance.new('Script', decalspam_21)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local o = Instance.new("Message",workspace)
+		o.Text = "Join in my discord https://discord.gg/mKwk58qV team mexicokidd"--put your message here
+		--all scripts are in the desc lol
+		wait(10)
+		o:Destroy()
+	end)
+end
+coroutine.wrap(PBCDZ_fake_script)()
+
+end)
+VoltsSection:NewButton("Tiger admin [PRISON LIFE ONLY!!!]", "ButtonInfo", function()
+    --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+-- Tiger admin 2.0
+repeat task.wait() until game:IsLoaded()
+local Temp = {Loopkill={},LkTEAMS={}}
+local TigerAdmin_UI = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local CommandsList = Instance.new("ScrollingFrame")
+local UIStroke = Instance.new("UIStroke")
+local UIListLayout = Instance.new("UIListLayout")
+local UIStroke_2 = Instance.new("UIStroke")
+local CommandBar = Instance.new("TextBox")
+local UIStroke_3 = Instance.new("UIStroke")
+local Title = Instance.new("TextLabel")
+local Disc = Instance.new("TextLabel")
+local Temp_Clone = Instance.new("TextButton")
+local UIStroke_4 = Instance.new("UIStroke")
+local Notif = Instance.new("Frame")
+local UIStroke_5 = Instance.new("UIStroke")
+local UICorner_2 = Instance.new("UICorner")
+local Text = Instance.new("TextLabel")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+TigerAdmin_UI.Name = "TigerAdmin_UI"
+local PreferedParent = nil
+xpcall(function()
+	PreferedParent = (game:GetService("CoreGui"))
+	TigerAdmin_UI.Parent = PreferedParent
+end, function()
+	PreferedParent = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
+	TigerAdmin_UI.Parent = PreferedParent
+end)
+TigerAdmin_UI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+TigerAdmin_UI.ResetOnSpawn = false
+Main.Name = "Main"
+Main.Parent = TigerAdmin_UI
+Main.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0, 0, 0.245635912, 0)
+Main.Size = UDim2.new(0, 311, 0, 440)
+UICorner.CornerRadius = UDim.new(0, 3)
+UICorner.Parent = Main
+CommandsList.Name = "CommandsList"
+CommandsList.Parent = Main
+CommandsList.Active = true
+CommandsList.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CommandsList.BackgroundTransparency = 1.000
+CommandsList.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CommandsList.BorderSizePixel = 0
+CommandsList.Position = UDim2.new(0.0311283227, 0, 0.076167196, 0)
+CommandsList.AutomaticCanvasSize = Enum.AutomaticSize.Y
+CommandsList.Size = UDim2.new(0, 286, 0, 345)
+CommandsList.BottomImage = "rbxassetid://5168609593"
+CommandsList.MidImage = "rbxassetid://5168609593"
+CommandsList.ScrollBarImageTransparency = 0.510
+CommandsList.ScrollBarThickness = 6
+CommandsList.TopImage = "rbxassetid://5168609593"
+UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke.Color = Color3.fromRGB(255, 255, 255)
+UIStroke.Transparency = 0.680
+UIStroke.Parent = CommandsList
+UIListLayout.Parent = CommandsList
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 4)
+UIStroke_2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_2.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_2.Transparency = 0.680
+UIStroke_2.Parent = Main
+CommandBar.Name = "CommandBar"
+CommandBar.Parent = Main
+CommandBar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CommandBar.BackgroundTransparency = 1.000
+CommandBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CommandBar.BorderSizePixel = 0
+CommandBar.Position = UDim2.new(0.0289389063, 0, 0.890909076, 0)
+CommandBar.Size = UDim2.new(0, 289, 0, 39)
+CommandBar.ClearTextOnFocus = false
+CommandBar.Font = Enum.Font.SourceSans
+CommandBar.PlaceholderText = "Input Commands here!"
+CommandBar.Text = ""
+CommandBar.TextColor3 = Color3.fromRGB(223, 223, 223)
+CommandBar.TextSize = 14.000
+UIStroke_3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_3.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_3.Transparency = 0.680
+UIStroke_3.Parent = CommandBar
+Title.Name = "Title"
+Title.Parent = Main
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0.0311283227, 0, 0.0147420019, 0)
+Title.Size = UDim2.new(0, 301, 0, 16)
+Title.Font = Enum.Font.Gotham
+Title.Text = "TIGER ADMIN"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+Disc.Name = "Disc"
+Disc.Parent = Main
+Disc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Disc.BackgroundTransparency = 1.000
+Disc.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Disc.BorderSizePixel = 0
+Disc.Position = UDim2.new(0, 0, 1, 0)
+Disc.Size = UDim2.new(0, 311, 0, 27)
+Disc.Visible = false
+Disc.Font = Enum.Font.SourceSans
+Disc.Text = "Description: Kills a certain player"
+Disc.TextColor3 = Color3.fromRGB(255, 255, 255)
+Disc.TextSize = 14.000
+Disc.TextStrokeTransparency = 0.650
+Temp_Clone.Name = "Temp_Clone"
+Temp_Clone.Parent = TigerAdmin_UI
+Temp_Clone.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Temp_Clone.BackgroundTransparency = 1.000
+Temp_Clone.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Temp_Clone.BorderSizePixel = 0
+Temp_Clone.Size = UDim2.new(0, 286, 0, 28)
+Temp_Clone.Visible = false
+Temp_Clone.AutoButtonColor = false
+Temp_Clone.Font = Enum.Font.Gotham
+Temp_Clone.Text = "!kill <player>"
+Temp_Clone.TextColor3 = Color3.fromRGB(203, 203, 203)
+Temp_Clone.TextSize = 14.000
+Temp_Clone.TextWrapped = true
+UIStroke_4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_4.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_4.Transparency = 0.680
+UIStroke_4.Parent = Temp_Clone
+Notif.Name = "Notif"
+Notif.Parent = TigerAdmin_UI
+Notif.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+Notif.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Notif.BorderSizePixel = 0
+Notif.Position = UDim2.new(0.00780572416, 0, 0.152119696, 0)
+Notif.Size = UDim2.new(0, 222, 0, 58)
+Notif.Visible = false
+UIStroke_5.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_5.Color = Color3.fromRGB(255, 255, 255)
+UIStroke_5.Thickness = 0.700
+UIStroke_5.Transparency = 0.680
+UIStroke_5.Parent = Notif
+UICorner_2.CornerRadius = UDim.new(0, 3)
+UICorner_2.Parent = Notif
+Text.Name = "Text"
+Text.Parent = Notif
+Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Text.BackgroundTransparency = 1.000
+Text.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Text.BorderSizePixel = 0
+Text.Size = UDim2.new(0.972972989, 0, 1, 0)
+Text.Font = Enum.Font.SourceSans
+Text.Text = "Error! Jeffcool in game spotted please leave!"
+Text.TextColor3 = Color3.fromRGB(190, 190, 190)
+Text.TextScaled = true
+Text.TextSize = 14.000
+Text.TextWrapped = true
+UITextSizeConstraint.Parent = Text
+UITextSizeConstraint.MaxTextSize = 14
+local AllowFocus = false
+Temp.OrginPosMain = Main.Position
+Temp.OrginPosMainGone = Temp.OrginPosMain+UDim2.new(-.3,0,0,0)
+Temp.NotifOldPos = Notif.Position
+Main:TweenPosition(Temp.OrginPosMainGone,"Out","Quart")
+plr = game:GetService("Players").LocalPlayer
+
+-- Services --
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local TweenService = game:GetService("TweenService")
+
+-- Player --
+local Player = Players.LocalPlayer
+local Character, Humanoid, HRP
+-- API --
+local Remote = workspace:WaitForChild("Remote")
+local API, Commands, States = {}, {}, {}
+local Settings = {
+	Prefix = "!"
+}
+States.Unloaded = false
+game:GetService("UserInputService").InputEnded:Connect(function(Key,c)
+	if States.Unloaded == false then
+		if Key.KeyCode == Enum.KeyCode.Semicolon and not c then
+			Main:TweenPosition(Temp.OrginPosMain,"Out","Quart",.38)
+			CommandBar:CaptureFocus()
+			wait(.5)
+			AllowFocus = true
+		end
+		if Key.UserInputType == Enum.UserInputType.MouseButton1 and not c then
+			if not Temp.OnGui then
+				AllowFocus = false
+			end
+		end
+	end
+end)
+Main.MouseLeave:Connect(function()
+	Temp.OnGui = false
+	Disc.Visible = false
+end)
+Main.MouseEnter:Connect(function()
+	Temp.OnGui = true
+end)
+coroutine.wrap(function()
+	while wait() do
+		if AllowFocus then
+			repeat task.wait() until not AllowFocus
+			Main:TweenPosition(Temp.OrginPosMainGone,"Out","Quart",.38)
+			Disc.Visible = false
+		end
+	end
+end)()
+
+API.StringArgsChecker = function(Text)
+	local List = {"all","others","me"}
+	local Ts = game.Teams:GetChildren()
+	for i,v in pairs(Ts) do
+		Ts[i] = v.Name:lower()
+	end
+	if (table.find(List,Text:lower())) then
+		return (table.find(List,Text:lower()) and true)
+	end
+	if table.find(Ts,Text) then
+		return "Team"
+	end
+	return nil
+end
+
+API.Tween = function(Obj,Prop,New,Time)
+	if not Time then Time = .5 end
+	local Tweened = game:GetService("TweenService"):Create(Obj, TweenInfo.new( Time, Enum.EasingStyle.Quart, Enum.EasingDirection.Out, 0, false,0), {[Prop] = New,})
+	Tweened:Play()
+	return {Stop = function() Tweened:Cancel() end, }
+end
+Temp.CMDA = 0
+API.AddCommand = function(Name, Function, Setting)
+	Temp.CMDA  = Temp.CMDA +1
+	local Alts = ""
+	Commands[Name:lower()] = {f = Function,}
+	if Setting["Alt"] then
+		for i,v in pairs(Setting["Alt"]) do
+			if v and tostring(v) then
+				Commands[v] = Commands[Name:lower()]
+				Alts = Alts.."/!"..v
+			end
+		end
+	end
+	local CommandLabel = Temp_Clone:Clone()
+	if Setting["Type"] then Setting["Type"] = Setting["Type"]:lower() end
+	if Setting["Type"] and Setting["Type"] == "toggle" then
+		Setting["Type"] = "<ON/OFF>"
+	elseif Setting["Type"] and Setting["Type"] == "player" then
+		Setting["Type"] = "<Player>"
+	elseif Setting["Type"] and Setting["Type"] == "all" then
+		Setting["Type"] = "<Player,All,Me>"
+	elseif Settings and Settings["Type"] ~=nil then
+		Setting["Type"] = "<"..Setting["Type"]..">"
+	else
+		Setting["Type"] = ""
+	
+	end
+	
+	CommandLabel.Text = Settings.Prefix..Name..Alts.." "..Setting["Type"]
+	CommandLabel.Visible = true
+	CommandLabel.Parent = CommandsList
+	CommandLabel.MouseButton1Up:Connect(function()
+		CommandBar.Text = Settings.Prefix..Name
+		CommandBar:CaptureFocus()
+	end)
+	CommandLabel.MouseEnter:Connect(function()
+		API.Tween(CommandLabel,"BackgroundTransparency",.67,.4)
+		Disc.Visible = true
+		Disc.Text = Setting["Description"]
+	end)
+	CommandLabel.MouseLeave:Connect(function()
+		API.Tween(CommandLabel,"BackgroundTransparency",1,.4)
+	end)
+end
+API.FindPlayer =function(String,IgnoreError)
+	if not String then
+		return nil
+	end
+	if String:lower() == "me" then
+		return plr
+	end
+	String = String:gsub("%s+", "")
+	for _, v in pairs(game:GetService("Players"):GetPlayers()) do
+		if v.Name:lower():match("^" .. String:lower()) or v.DisplayName:lower():match("^" .. String:lower()) then
+			return v
+		end
+	end
+	if not IgnoreError then
+		API.Notify("No players in server matching the name '"..String.."'")
+	end
+	return nil
+end
+API.FindCommand = function(cmd)
+	cmd=string.gsub(cmd,"!","")
+	local Command = Commands[cmd]
+	if Command then
+		return Command.f
+	end
+	return Command
+end
+
+API.Notify = function(Text,Dur)
+	pcall(function()
+		local a = Instance.new("ScreenGui",PreferedParent)
+		local NotifNew = Notif:Clone()
+		NotifNew.Visible = true
+		NotifNew.Parent = a
+		NotifNew.Position = Temp.NotifOldPos-UDim2.new(1,0,0,0)
+		task.spawn(function()
+			NotifNew:TweenPosition(Temp.NotifOldPos,"Out","Quart",.8)
+			NotifNew:FindFirstChild("Text").Text = Text or "No notification text given."
+			wait((Dur) or 3)
+			NotifNew:TweenPosition(Temp.NotifOldPos-UDim2.new(1,0,0,0),"Out","Quart",.8)
+			wait(.9)
+			NotifNew:Destroy()
+		end)
+	end)
+end
+API.GetGun =function(Item)
+	task.spawn(function()
+		local isAlreadyThere = plr.Backpack:FindFirstChild(Item) or plr.Character:FindFirstChild(Item)
+		if isAlreadyThere then
+			return isAlreadyThere
+		else
+			pcall(function()
+				task.spawn(function()
+					workspace:FindFirstChild("Remote")['ItemHandler']:InvokeServer({Position = Player.Character.Head.Position,Parent = workspace.Prison_ITEMS:FindFirstChild(Item, true)})
+				end)
+			end)
+		end
+	end)
+end
+API.MoveTo = function(Cframe)
+	if typeof(Cframe):lower() == "position" then Cframe = CFrame.new(Cframe) end
+	for i =1,3 do
+		task.wait()
+		plr.Character:FindFirstChild("HumanoidRootPart").CFrame = Cframe
+	end
+end
+API.IsFound = function(Name)
+	local t = (plr.Backpack:FindFirstChild(Name) or plr.Character:FindFirstChild(Name))
+	if t and t:IsA("Tool") then
+		return t
+	end
+	return nil
+end
+API.GetPosition = function()
+	return plr.Character:FindFirstChild("HumanoidRootPart").CFrame
+end
+API.TestA = function()
+	for i =1,10 do --//STOP IT HOLY SHIT WHY WONT IT WORK
+		Temp.Respawned:Disconnect()
+	end
+	Temp.Respawned = nil
+end
+function API.Refresh(Team,Position,NoForce) --// v2.0
+	if typeof(Position):lower() == "position" then Position = CFrame.new(Position) end
+	local LastPosition = API.GetPosition()
+	local LastCameraPosition = workspace.CurrentCamera.CFrame
+	if not Team then Team = plr.Team end
+	local done = false
+	Temp.Respawned = plr.CharacterAdded:Connect(function(c)
+		if done then return end
+		done = true
+		task.spawn(function()
+			workspace.CurrentCamera.CameraType = Enum.CameraType.Scriptable
+			wait(.1)
+			workspace.CurrentCamera.CameraType = Enum.CameraType.Custom
+			workspace.CurrentCamera.CameraSubject = plr.Character:WaitForChild("Humanoid")
+
+		end)
+		task.spawn(function()
+			c:WaitForChild("ForceField"):Destroy()
+		end)
+		for i =1,3 do
+			c:WaitForChild("HumanoidRootPart").CFrame = LastPosition
+			game:GetService("RunService").Stepped:Wait()
+		end
+		API.TestA()
+		Position = nil--// why the fuck it keep spawning somewhere else!!!! GRRRRR
+		NoForce = nil
+		LastCameraPosition = nil
+		Team = nil
+	end)
+	if Team ~= game.Teams.Criminals then
+		Position = Position
+		workspace.Remote.TeamEvent:FireServer(Team.TeamColor.Name)
+	else
+		repeat
+			game:GetService("RunService").Stepped:Wait()
+			if firetouchinterest then
+				firetouchinterest(plr.Character:FindFirstChildOfClass("Part"), game:GetService("Workspace")["Criminals Spawn"]:GetChildren()[1], 0)
+				firetouchinterest(plr.Character:FindFirstChildOfClass("Part"), game:GetService("Workspace")["Criminals Spawn"]:GetChildren()[1], 1)
+			end
+			game:GetService("Workspace")["Criminals Spawn"]:GetChildren()[1].Transparency = 1
+			game:GetService("Workspace")["Criminals Spawn"]:GetChildren()[1].CanCollide = false
+			game:GetService("Workspace")["Criminals Spawn"]:GetChildren()[1].CFrame = API:GetPosition()
+		until plr.Team == game:GetService("Teams").Criminals
+		game:GetService("Workspace")["Criminals Spawn"]:GetChildren()[1].CFrame = CFrame.new(0, 3125, 0)
+	end
+	return nil
+end
+function API.ChangeTeam(Team)
+	API.Refresh(Team,nil,true)
+end
+function API.GuardsFull(a)
+	if #game:GetService("Teams").Guards:GetPlayers()==8 then
+		if a then
+			if Player.Team == game.Teams.Guards then
+				return false
+			end
+		end
+		return false
+	end
+	return true
+end
+API.KillTeam = function(Team)
+	local LastT, Bullets,OrginTeam = nil,{}, plr.Team
+	local function Fire()
+		API.GetGun("M9")
+		local Gun = plr.Backpack:FindFirstChild("M9")
+		repeat task.wait()
+			Gun = plr.Backpack:FindFirstChild("M9")
+			API.GetGun("M9")
+		until Gun
+		task.spawn(function()
+			game:GetService("ReplicatedStorage"):WaitForChild("ShootEvent"):FireServer(Bullets, Gun)
+			game:GetService("ReplicatedStorage").ReloadEvent:FireServer(Gun)
+		end)
+	end
+	if Team ~= "all" then
+		for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+			if v and v ~= plr and v.Team == Team then
+				for i =1,15 do
+					Bullets[#Bullets+1] = {
+						["RayObject"] = Ray.new(Vector3.new(), Vector3.new()),
+						["Distance"] = 0,
+						["Cframe"] = CFrame.new(),
+						["Hit"] = v.Character:FindFirstChild("Head"),
+					}
+				end
+			end
+		end
+		if Team ~= game.Teams.Inmates then
+			API.ChangeTeam(game.Teams.Inmates)
+		else
+			API.ChangeTeam(game.Teams.Criminals)
+		end
+		wait(.1)
+		Fire()
+		wait(.5)
+		if plr.Team ~=OrginTeam then
+			API.ChangeTeam(OrginTeam)
+		end
+	else
+		for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+			if v and v ~= plr and v.Character then
+				for i =1,15 do
+					Bullets[#Bullets+1] = {
+						["RayObject"] = Ray.new(Vector3.new(), Vector3.new()),
+						["Distance"] = 0,
+						["Cframe"] = CFrame.new(),
+						["Hit"] = v.Character:FindFirstChild("Head"),
+					}
+				end
+			end
+		end
+		if plr.Team ~= game.Teams.Inmates then
+			API.ChangeTeam(game.Teams.Inmates)
+		end
+		Fire()
+		wait(.1)
+		API.ChangeTeam(game.Teams.Criminals)
+		wait()
+		Fire()
+		wait(.5)
+		if plr.Team ~=OrginTeam then
+			API.ChangeTeam(OrginTeam)
+		end
+	end
+
+end
+API.GetCar = function(To)
+	if not To then To = API.GetPosition() end
+	local Car = nil
+	local L = API.GetPosition()
+	for i,v in pairs(game:GetService("Workspace").CarContainer:GetChildren()) do
+		if v and v:IsA("Model") then
+			if v:WaitForChild("Body"):WaitForChild("VehicleSeat").Occupant == nil then
+				Car = v
+			end
+		end
+	end
+	if not Car then
+		coroutine.wrap(function()
+			if not Car then
+				Car = game:GetService("Workspace").CarContainer.ChildAdded:Wait()
+			end
+		end)()
+		API.MoveTo(game:GetService("Workspace").Prison_ITEMS.buttons:GetChildren()[7]["Car Spawner"].CFrame*CFrame.new(0,2.5,0))
+		wait(.23)
+		repeat task.wait()
+			task.spawn(function()
+				workspace.Remote.ItemHandler:InvokeServer(game:GetService("Workspace").Prison_ITEMS.buttons:GetChildren()[7]["Car Spawner"])
+			end)
+		until Car
+	end
+	repeat task.wait() until Car
+	Car:WaitForChild("Body"):WaitForChild("VehicleSeat")
+	Car.PrimaryPart = Car.Body.VehicleSeat
+	local Seat = Car.Body.VehicleSeat
+	API.MoveTo(To)
+	repeat task.wait()
+		Car:SetPrimaryPartCFrame(To)
+		Seat:Sit(plr.Character:FindFirstChildOfClass("Humanoid"))
+	until plr.Character:FindFirstChildOfClass("Humanoid").Sit == true
+	Car:SetPrimaryPartCFrame(To)
+	plr.Character:FindFirstChildOfClass('Humanoid').Sit = false
+	wait()
+	API.MoveTo(L)
+end
+API.FindShield = function()
+	local Shield = Players:FindFirstChild("Riot Shield", true)
+	if not Shield then
+		for _,Target in pairs(Players:GetPlayers()) do
+			if Target.Character and Target.Character:FindFirstChild("Riot Shield") then
+				Shield = Target.Character["Riot Shield"]
+				break
+			end
+		end
+	end
+	return Shield
+end
+API.Bring = function(Target,TeleportTo)
+	if not TeleportTo then TeleportTo = API.GetPosition() end
+	local CarSelected = nil
+	local Seat = nil
+	local Attempts = 0
+	for i,v in pairs(game:GetService("Workspace").CarContainer:GetChildren()) do
+		if v then
+			if v:WaitForChild("Body"):WaitForChild("VehicleSeat").Occupant == nil then
+				CarSelected = v
+			end
+		end
+	end
+	if not CarSelected then
+		coroutine.wrap(function()
+			if not CarSelected then
+				CarSelected = game:GetService("Workspace").CarContainer.ChildAdded:Wait()
+			end
+		end)()
+		API.MoveTo(game:GetService("Workspace").Prison_ITEMS.buttons:GetChildren()[7]["Car Spawner"].CFrame*CFrame.new(0,2.5,0))
+		wait(.23)
+		repeat task.wait()
+			task.spawn(function()
+				workspace.Remote.ItemHandler:InvokeServer(game:GetService("Workspace").Prison_ITEMS.buttons:GetChildren()[7]["Car Spawner"])
+			end)
+		until CarSelected
+	end
+	repeat game:GetService("RunService").RenderStepped:Wait() until CarSelected ~= nil
+	if CarSelected then
+		CarSelected:WaitForChild("Body"):WaitForChild("VehicleSeat")
+		CarSelected.PrimaryPart = CarSelected.Body.VehicleSeat
+		Seat = CarSelected.Body.VehicleSeat
+		CarSelected:SetPrimaryPartCFrame(plr.Character:GetPrimaryPartCFrame())
+		repeat task.wait()
+			Seat:Sit(plr.Character:FindFirstChildOfClass("Humanoid"))
+		until plr.Character:FindFirstChildOfClass("Humanoid").Sit == true
+		repeat game:GetService("RunService").RenderStepped:Wait()
+			Attempts = Attempts+1
+			if not Target.Character or Target.Character:FindFirstChildOfClass("Humanoid").Health <1 then
+				break
+			end
+			CarSelected:SetPrimaryPartCFrame(Target.Character:GetPrimaryPartCFrame()*CFrame.new(0,-.2,-5))
+		until Target.Character:FindFirstChildOfClass("Humanoid").Sit == true or Attempts >500
+		for i =1,5 do
+			task.wait()
+			CarSelected:SetPrimaryPartCFrame(TeleportTo)
+		end
+	end
+end
+
+API.Kill = function(Target,Attempt,StopChangeTeam)
+	local ChangeTeam = nil
+	if Target.Team == plr.Team then
+		ChangeTeam = plr.Team
+		if Target.Team ~= game.Teams.Inmates then
+			API.Refresh(game.Teams.Inmates,API.GetPosition(),true)
+		elseif Target.Team ~= game.Teams.Criminals then
+			API.Refresh(game.Teams.Criminals,API.GetPosition(),true)
+		else
+			API.Refresh(game.Teams.Inmates,API.GetPosition(),true)
+		end
+	end
+	if Target == plr then
+		plr.Character:FindFirstChildOfClass("Humanoid").Health = 0
+		return 
+	end
+	local BulletTable = {}
+	if Target.Character:FindFirstChildOfClass("Humanoid") and Target.Character:FindFirstChildOfClass("Humanoid").Health <1 then
+		return
+	end
+	local PewPew = nil
+	for i =1,15 do
+		BulletTable[#BulletTable+1] = {
+			["RayObject"] = Ray.new(Vector3.new(), Vector3.new()),
+			["Distance"] = 0,
+			["Cframe"] = CFrame.new(),
+			["Hit"] = Target.Character:FindFirstChild("Head"),
+		}
+	end
+	repeat API.GetGun("Remington 870") game:GetService("RunService").RenderStepped:Wait() PewPew = Player.Backpack:FindFirstChild("Remington 870") or Player.Character:FindFirstChild("Remington 870") until PewPew
+	task.spawn(function()
+		game:GetService("ReplicatedStorage"):WaitForChild("ShootEvent"):FireServer(BulletTable, PewPew)
+		game:GetService("ReplicatedStorage").ReloadEvent:FireServer(PewPew)
+	end)
+	wait(.25)
+	if Target.Character:FindFirstChildOfClass("Humanoid").Health >0 then
+		wait(.4)
+		task.spawn(function()
+			game:GetService("ReplicatedStorage"):WaitForChild("ShootEvent"):FireServer(BulletTable, PewPew)
+			game:GetService("ReplicatedStorage").ReloadEvent:FireServer(PewPew)
+		end)
+		wait(.25)
+		if not StopChangeTeam then
+			API.Refresh(ChangeTeam,API.GetPosition(),true)
+		end
+		return
+	end
+	if ChangeTeam and not StopChangeTeam then
+		API.Refresh(ChangeTeam,API.GetPosition(),true)
+	end
+end
+API.Guns = function()
+	if game:GetService("MarketplaceService"):UserOwnsGamePassAsync(plr.UserId, 96651) then
+		API.GetGun("M4A1")
+	end
+	API.GetGun("AK-47")
+	task.spawn(function()
+		API:GetGun("Remington 870")
+	end)
+	API:GetGun("M9")
+end
+API.ChangeToggle = function(Name,arg2)
+	if States[Name] == nil then
+		States[Name] = false
+	end
+	if States[Name] ~= nil then
+		if arg2 then
+			if arg2 == "on" then
+				States[Name] = true
+			elseif arg2 == "off" then
+				States[Name] = false
+			end
+			return
+		end
+		States[Name] = not States[Name]
+	end
+end
+API.ExecuteCommand = function(Text)
+	if States.Unloaded then return end
+	if string.sub(Text, #Settings.Prefix, 1) ~= Settings.Prefix then
+		return
+	end
+	Text=Text:lower()
+	local Split = string.split(Text, " ")
+	local Command = API.FindCommand(Split[1])
+	if not Command then
+		API.Notify("No command found under '"..Text:split(" ")[1].."'")
+		return
+	end
+	local Success, Error = pcall(task.spawn,Command, Split)
+	if not Success then
+		warn("--// TIGER ADMIN ERROR \\\\\--\nCommand: "..Text:split(" ")[1].."\n"..Error)
+	end
+end
+---
+function API.BadArea(Player)
+	local mod = require(game.ReplicatedStorage["Modules_client"]["RegionModule_client"])
+	local a = pcall(function()
+		if mod.findRegion(Player.Character) then
+			mod = mod.findRegion(Player.Character)["Name"]
+		end
+	end)
+	if not a then
+		return
+	end
+	for i, v in pairs(game:GetService("ReplicatedStorage").PermittedRegions:GetChildren()) do
+		if v and mod == v.Value then
+			return false
+		end
+	end
+	return true
+end
+-- Commands --
+API.AddCommand("unload", function(Args)
+	States = {}
+	States.Unloaded = true
+	API.Notify("Unloaded Gui, States and stopped most loops.")
+	Main:TweenPosition(Main.Position+UDim2.new(0,0,1,0),"In","Back",.45)
+	wait(.46)
+	TigerAdmin_UI:Destroy()
+end,{["Description"] = "Unloads the script",})
+API.AddCommand("fix", function(Args)
+	if Temp.ViewingPlayer then
+		Temp.ViewingPlayer:Disconnect()
+	end
+	workspace.CurrentCamera.CameraType = Enum.CameraType.Custom
+	workspace.CurrentCamera.CameraSubject = plr.Character.Humanoid
+	plr.Character:WaitForChild("HumanoidRootPart").Anchored = false
+	plr.Character:WaitForChild("Humanoid").WalkSpeed = 16
+end,{["Description"] = "Fixes Camera and player character",})
+----------------------------------------------------------// <PLAYER> / <ALL> COMMANDS
+API.AddCommand("kill", function(Args)
+	if Args[2] then
+		local t = {}
+		local index = {}
+		for i,v in pairs(game:GetService("Teams"):GetChildren()) do
+			table.insert(t,v.Name:lower())
+			table.insert(index,v)
+		end
+		if table.find(t,Args[2]) then
+			API.KillTeam(index[table.find(t,Args[2])])
+			return
+		end
+		if API.StringArgsChecker(Args[2]) == nil then
+			local Target = API.FindPlayer(Args[2])
+			if Target then
+				API.Kill(Target)
+			end
+		else
+			API.KillTeam("all")
+		end
+	end
+end,{["Description"] = "Kills player(s)",["Type"] = "all",})
+API.AddCommand("arrest", function(Args)
+	if Args[2] and Args[2] == "all" then
+		local LastPosition = API.GetPosition()
+		for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+			if v and v~= game:GetService("Players").LocalPlayer and v.Team == game.Teams.Criminals or (API:BadArea(v) and v.Team == game.Teams.Inmates) and v.Character.PrimaryPart and v.Character:FindFirstChildOfClass("Humanoid").Health>0 then
+				repeat game:GetService("RunService").Stepped:Wait()
+					API.MoveTo(v.Character:GetPrimaryPartCFrame()*CFrame.new(0,0,-4.5))
+					task.spawn(function()
+						workspace.Remote.arrest:InvokeServer(v.Character.PrimaryPart)
+					end)
+				until v.Character["Head"]:FindFirstChildOfClass("BillboardGui")
+				API.MoveTo(LastPosition)
+				wait(.7)
+			end
+		end
+		API.MoveTo(LastPosition)
+	elseif Args[2] and Args[2]~="all" then
+		local LastPosition = API.GetPosition()
+		local Target = API.FindPlayer(Args[2])
+		if Target then
+			if Target.Team == game.Teams.Guards or not API.BadArea(Target) then
+				return API.Notify("Can't arrest this player!")
+			end
+			repeat game:GetService("RunService").Stepped:Wait()
+				API.MoveTo(Target.Character:GetPrimaryPartCFrame()*CFrame.new(0,0,-4.5))
+				task.spawn(function()
+					workspace.Remote.arrest:InvokeServer(Target.Character.PrimaryPart)
+				end)
+			until Target.Character["Head"]:FindFirstChildOfClass("BillboardGui")
+		end
+		API.MoveTo(LastPosition)
+	end
+end,{["Description"] = "Arrests a player",["Type"] = "Player,All"})
+API.AddCommand("bring", function(Args)
+	local Target = API.FindPlayer(Args[2])
+	if Target then
+		API.Bring(Target)
+	end
+end,{["Description"] = "Brings a player to you",["Type"] = "player"})
+API.AddCommand("goto", function(Args)
+	local Target = API.FindPlayer(Args[2])
+	if Target then
+		API.MoveTo(Target.Character:GetPrimaryPartCFrame()*CFrame.new(0,0,2.5))
+	end
+end,{["Description"] = "Teleports you to a player",["Type"] = "player"})
+API.AddCommand("view", function(Args)
+	local Target = API.FindPlayer(Args[2])
+	if Target then
+		if Temp.ViewingPlayer then
+			Temp.ViewingPlayer:Disconnect()
+		end
+		Temp.ViewingPlayer = game:GetService("RunService").RenderStepped:Connect(function()
+			pcall(function()
+				task.spawn(function()
+					workspace.CurrentCamera.CameraSubject = Target.Character:WaitForChild("Humanoid")
+				end)
+			end)
+		end)
+		API.Notify("Now viewing this player.")
+	end
+end,{["Description"] = "Spy on a player",["Type"] = "player"})
+API.AddCommand("unview", function(Args)
+	if Temp.ViewingPlayer then
+		Temp.ViewingPlayer:Disconnect()
+		Temp.ViewingPlayer = nil
+	end
+	workspace.CurrentCamera.CameraType = Enum.CameraType.Custom
+	workspace.CurrentCamera.CameraSubject = plr.Character.Humanoid
+	API.Notify("Stopped view.")
+end,{["Description"] = "Stops view command.",})
+API.AddCommand("loopkill", function(Args)
+	local Target = API.FindPlayer(Args[2])
+	local t = {}
+	local index = {}
+	for i,v in pairs(game:GetService("Teams"):GetChildren()) do
+		table.insert(t,v.Name:lower())
+		table.insert(index,v)
+	end
+	if table.find(t,Args[2]) then
+		local TeamFound = index[table.find(t,Args[2])]
+		Temp.LkTEAMS[#Temp.LkTEAMS+1] = TeamFound
+		return
+	end
+	if API.StringArgsChecker(Args[2]) == nil then
+		local Target = API.FindPlayer(Args[2])
+		if Target then
+			if not table.find(Temp.Loopkill,Target.Name) then
+				Temp.Loopkill[#Temp.Loopkill+1] = Target.Name
+				API.Notify("Now loop killing player.")
+			end
+		end
+	else
+		Temp.LKALL = true
+		API.Notify("Started looping")
+
+	end
+end,{["Description"] = "Spam kills the player even if he leaves",["Type"] = "all"})
+API.AddCommand("unloopkill", function(Args)
+	local t = {}
+	local index = {}
+	for i,v in pairs(game:GetService("Teams"):GetChildren()) do
+		table.insert(t,v.Name:lower())
+		table.insert(index,v)
+	end
+	if table.find(t,Args[2]) then
+		local TeamFound = index[table.find(t,Args[2])]
+		for i,v in pairs(Temp.LkTEAMS) do
+			if v == TeamFound then
+				Temp.LkTEAMS[i] = nil
+			end
+		end
+		API.Notify("Stopped looping")
+		return
+	end
+	if API.StringArgsChecker(Args[2]) == nil then
+		local Target = API.FindPlayer(Args[2])
+		if Target then
+			if table.find(Temp.Loopkill,Target.Name) then
+				table.remove(Temp.Loopkill,table.find(Temp.Loopkill,Target.Name))
+				API.Notify("Stopped loopkilling this player.")
+			end
+		end
+	else
+		Temp.LKALL = false
+		API.Notify("Stopped looping")
+
+	end
+end,{["Description"] = "Stops loopkilling a player",["Type"] = "all"})
+------------------------------------------------------------------------//<ON><OFF> COMMANDS
+API.AddCommand("autoitems", function(Args)
+	local StateToChange = "AutoItems"
+	API.ChangeToggle(StateToChange,Args[2])
+end,{["Description"] = "Gives you tools everytime you die",["Type"] = "toggle"})
+API.AddCommand("autorespawn", function(Args)
+	local StateToChange = "AutoRespawn"
+	API.ChangeToggle(StateToChange,Args[2])
+	API.Refresh(plr.Team)
+end,{["Description"] = "Respawns you back to your position after you die",["Type"] = "toggle",["Alt"] = {"autore"}})
+----------------------------------------------------------------OTHER
+API.AddCommand("removecars", function(Args)
+	local p = API.GetPosition()
+	for i,v in pairs(workspace.CarContainer:GetChildren()) do
+		if v:WaitForChild("Body"):WaitForChild("VehicleSeat").Occupant == nil then
+			for i= 1,3 do
+				task.wait()
+				v:WaitForChild("Body"):WaitForChild("VehicleSeat"):Sit(plr.Character:FindFirstChildOfClass("Humanoid"))
+			end
+			repeat task.wait() until plr.Character:FindFirstChildOfClass("Humanoid").Sit == true
+			v:WaitForChild("Body"):WaitForChild("VehicleSeat")
+			v.PrimaryPart = v.Body.VehicleSeat
+
+			for i =1,3 do
+				task.wait()
+				v:SetPrimaryPartCFrame(CFrame.new(99999,workspace.FallenPartsDestroyHeight+15,999999))
+			end
+			wait(.25)
+			plr.Character:FindFirstChildOfClass("Humanoid").Sit = false
+		end
+	end
+	wait()
+	API.MoveTo(p)
+end,{["Description"] = "Trys to remove all cars around the ma[",})
+API.AddCommand("refresh", function(Args)
+	API.Refresh(plr.Team,API.GetPosition(),true)
+end,{["Description"] = "Reloads your character",["Alt"] = {"re"}})
+API.AddCommand("inmate", function(Args)
+	API.Refresh(game.Teams.Inmates,API.GetPosition(),true)
+end,{["Description"] = "Reloads your character into inmates team",})
+API.AddCommand("guard", function(Args)
+	API.Refresh(game.Teams.Guards,API.GetPosition(),true)
+end,{["Description"] = "Reloads your character into inmates guards",})
+API.AddCommand("criminal", function(Args)
+	API.Refresh(game.Teams.Criminals,API.GetPosition(),true)
+end,{["Description"] = "Reloads your character into inmates criminals",})
+API.AddCommand("car", function(Args)
+	API.GetCar()
+end,{["Description"] = "Brings a car to you",})
+API.AddCommand("lag", function(Args)
+	if not API.GuardsFull(true) then
+		API.Refresh(game.Teams.Guards,API.GetPosition(),true)
+	else
+		API.GetGun("M9")
+		repeat task.wait() until API.IsFound("M9")
+	end
+	for i =1,45 do
+		game:GetService("ReplicatedStorage"):WaitForChild("ShootEvent"):FireServer({}, API.GetGun("M9"))
+	end
+	API.Notify("Lagged the server.")
+end,{["Description"] = "Lags the server",})
+API.AddCommand("crashserver", function(Args)
+	API.Notify("Attempting to crash the server this might take some time.")
+	if not API.GuardsFull(true) then
+		API.Refresh(game.Teams.Guards,API.GetPosition(),true)
+	else
+		API.GetGun("M9")
+		repeat task.wait() until API.IsFound("M9")
+	end
+	for i =1,10000000000 do
+		game:GetService("RunService").Stepped:Wait()
+		game:GetService("ReplicatedStorage"):WaitForChild("ShootEvent"):FireServer({},(plr.Backpack:FindFirstChild("M9") or plr.Character:FindFirstChild("M9")))
+	end
+end,{["Description"] = "Tries to crash the server",})
+API.AddCommand("guns", function(Args)
+	API.Guns()
+end,{["Description"] = "Gives you all guns",})
+API.AddCommand("m9", function(Args)
+	API.GetGun("M9")
+end,{["Description"] = "Gives you a m9",})
+API.AddCommand("ak", function(Args)
+	API.GetGun("AK-47")
+end,{["Description"] = "Gives you a ak",})
+API.AddCommand("shotgun", function(Args)
+	API.GetGun("Remington 870")
+end,{["Description"] = "Gives you a shotgun",})
+API.AddCommand("m4", function(Args)
+	API.GetGun("M4A1")
+end,{["Description"] = "Gives you a gun",})
+API.AddCommand("knife", function(Args)
+	workspace.Remote.ItemHandler:InvokeServer({Position=game:GetService("Players").LocalPlayer.Character.Head.Position,Parent=workspace.Prison_ITEMS.single["Crude Knife"]})
+end,{["Description"] = "Gives you a knife",})
+API.AddCommand("hammer", function(Args)
+	workspace.Remote.ItemHandler:InvokeServer({Position=game:GetService("Players").LocalPlayer.Character.Head.Position,Parent=workspace.Prison_ITEMS.single["Hammer"]})
+end,{["Description"] = "Gives you a hammer",})
+API.AddCommand("allcmds", function(Args)
+	API.Notify("Tiger admin has "..tostring(Temp.CMDA).." commands.")
+end,{["Description"] = "Tells you how much commands Tiger admin has",})
+API.AddCommand("shield", function()
+	local Shield = API.FindShield()
+	if not Shield then
+		API.Notify("Shield could not be found.")
+		return
+	end
+	repeat task.wait() 
+		Remote.equipShield:FireServer(Shield)	
+	until Player.Character and Player.Character:FindFirstChild("shield", true) and Player.Character:FindFirstChild("shield",true).Transparency < 1
+	if Player.Character:FindFirstChild("shield",true).CanCollide then
+		API.Notify("Warning: This shield has collisions")
+	end
+end, {["Description"] = "Will try to find a shield and equip one for you."})
+API.AddCommand("armory", function(Args)
+	local Pos = CFrame.new(835.3958129882812, 99.98998260498047, 2269.98046875)
+	local Target = API.FindPlayer(Args[2])
+	if not Target then
+		API.MoveTo(Pos)
+	else
+		API.Bring(Target,Pos)
+	end
+end,{["Description"] = "Teleports you to the armory",})
+API.AddCommand("prison", function(Args)
+	local Pos = CFrame.new(914.2466430664062, 99.98998260498047, 2365.96923828125)
+	local Target = API.FindPlayer(Args[2])
+	if not Target then
+		API.MoveTo(Pos)
+	else
+		API.Bring(Target,Pos)
+	end
+end,{["Description"] = "Teleports you to the prison",["Alt"] = {"nex"}})
+API.AddCommand("cafe", function(Args)
+	local Pos = CFrame.new(918.4052124023438, 99.98993682861328, 2228.078857421875)
+	local Target = API.FindPlayer(Args[2])
+	if not Target then
+		API.MoveTo(Pos)
+	else
+		API.Bring(Target,Pos)
+	end
+end,{["Description"] = "Teleports you to the cafe",})
+API.AddCommand("tower", function(Args)
+	local Pos = CFrame.new(822.0411987304688, 130.03990173339844, 2570.348876953125)
+	local Target = API.FindPlayer(Args[2])
+	if not Target then
+		API.MoveTo(Pos)
+	else
+		API.Bring(Target,Pos)
+	end
+end,{["Description"] = "Teleports you to the tower at yard",})
+API.AddCommand("crimbase", function(Args)
+	local Pos = CFrame.new(-860.5330200195312, 94.47602844238281, 2099.54833984375)
+	local Target = API.FindPlayer(Args[2])
+	if not Target then
+		API.MoveTo(Pos)
+	else
+		API.Bring(Target,Pos)
+	end
+end,{["Description"] = "Teleports you to the criminals base",})
+plr.CharacterAdded:Connect(function(NewChar)
+	NewChar:WaitForChild("Humanoid")
+	if States.AutoItems then
+		API.Guns()
+	end
+	if States.AutoRespawn then
+		NewChar:WaitForChild("Humanoid").BreakJointsOnDeath = not States.AutoRespawn
+		NewChar:WaitForChild("Humanoid").Died:Connect(function()
+			if not States.Unloaded and States.AutoRespawn == true then
+				API.Refresh(plr.Team,API.GetPosition())
+				task.spawn(function()
+					if States.AutoItems then
+						wait(.5)
+						API.Guns()
+					end
+				end)
+			end
+		end)
+	end
+end)
+Player.Chatted:Connect(API.ExecuteCommand)
+CommandBar.FocusLost:Connect(function(a)
+	local txt = CommandBar.Text
+	if a and #txt >0 then
+		if string.sub(txt,1,1) ~= Settings.Prefix then
+			txt = Settings.Prefix..txt
+		end
+		API.ExecuteCommand(txt)
+	end
+	CommandBar.Text = ""
+end)
+CommandBar.Changed:Connect(function()
+	if CommandBar.Text:find(";") and Settings.Prefix ~= ";" then
+		CommandBar.Text = CommandBar.Text:gsub(";","")
+	end
+end)
+
+--------------// FIELD OF LOOPS!
+task.spawn(function()
+	while wait(1) do --//Loopkill Optimized
+		if Temp.LKALL == true then
+			API.KillTeam("all")
+		end
+		for i,v in pairs(Temp.LkTEAMS) do
+			if v then
+				API.KillTeam(v)
+			end
+		end
+		if States.Unloaded then break end
+		if Temp.Loopkill and #Temp.Loopkill >0 then
+			for i,v in pairs(Temp.Loopkill) do
+				if v then
+					local Target = game:GetService("Players"):FindFirstChild(v)
+					if Target then
+						API.Kill(Target,nil,true)
+						wait(.7)
+					else
+						table.remove(Temp.Loopkill,i)
+					end
+				end
+			end
+		end
+	end
+end)
+API.Notify("Press ';' to open Tiger Admin Menu. Welcome to Tiger Admin 2.0",4)
+end)
+VoltsSection:NewButton("Fake ip logger", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/cbMJd5SH"))()
+end)
+VoltsSection:NewButton("Fake tool maker", "ButtonInfo", function()
+    --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+local tool = Instance.new('Tool', game:GetService('Players').LocalPlayer.Backpack)
+tool.Name = 'Cola'
+tool.CanBeDropped = false
+tool.Enabled = true
+tool.ManualActivationOnly = false
+tool.RequiresHandle = true
+tool.ToolTip = 'Drink me to gain double speed for 10 seconds!'
+local handle = Instance.new('Part', tool)
+handle.Name = 'Handle'
+handle.Size = Vector3.zero
+handle.Transparency = 1
+local hum = game:GetService('Players').LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid")
+local eatingAnim = Instance.new("Animation") --bugged
+eatingAnim.AnimationId = "rbxassetid://72042024"
+eating = hum:LoadAnimation(eatingAnim)
+---------------------------------------------------------------------------
+tool.Activated:Connect(function()
+    eating:Play()
+    wait(1)
+    hum.WalkSpeed = hum.WalkSpeed * 2
+    wait(10)
+    hum.WalkSpeed = hum.WalkSpeed / 2
+end)
+end)
+VoltsSection:NewSlider("SpeedAdjuster", "SliderInfo", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+local VsecondTab = Window:NewTab("VsecondTab")
+local VsecondSection = VsecondTab:NewSection("Vsecondsection")
+VsecondSection:NewButton("LexusHub v1dot2", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/102KIRA/W/refs/heads/main/W.1.2IMsigmA"))()
+end)
+VsecondSection:NewButton("Project Raw", "ButtonInfo", function()
+    --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+game:GetService("StarterGui"):SetCore("DevConsoleVisible", true)
+print("Installing Project RAW...")
+wait(2)
+print("Project RAW installed..")
+wait(2)
+warn("Enjoy Fe Bypass!1")
+wait(2)
+
+local sound = Instance.new("Sound", game.Workspace)
+sound.SoundId = "rbxassetid://8623387557"
+sound.Volume = 39
+sound:Play()
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "Project RAW"
+screenGui.ResetOnSpawn = false
+screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local mainFrame = Instance.new("Frame")
+mainFrame.Name = "MainFrame"
+mainFrame.Size = UDim2.new(0, 500, 0, 300)
+mainFrame.Position = UDim2.new(0.5, -250, 0.3, 0)
+mainFrame.BackgroundColor3 = Color3.fromRGB(240, 240, 240)
+mainFrame.BorderSizePixel = 0
+mainFrame.Active = true
+mainFrame.Draggable = true
+mainFrame.Parent = screenGui
+
+local topBar = Instance.new("Frame")
+topBar.Size = UDim2.new(1, 0, 0, 40)
+topBar.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
+topBar.BorderSizePixel = 0
+topBar.Parent = mainFrame
+
+local logoImage = Instance.new("ImageLabel")
+logoImage.Size = UDim2.new(0, 30, 0, 30)
+logoImage.Position = UDim2.new(0, 10, 0.5, -15)
+logoImage.BackgroundTransparency = 1
+logoImage.Image = "rbxassetid://88720881497694"
+logoImage.Parent = topBar
+
+local titleLabel = Instance.new("TextLabel")
+titleLabel.Size = UDim2.new(0, 200, 1, 0)
+titleLabel.Position = UDim2.new(0, 50, 0, 0)
+titleLabel.BackgroundTransparency = 1
+titleLabel.Text = "Project RAW"
+titleLabel.Font = Enum.Font.SourceSansBold
+titleLabel.TextSize = 20
+titleLabel.TextColor3 = Color3.fromRGB(50, 50, 50)
+titleLabel.TextXAlignment = Enum.TextXAlignment.Left
+titleLabel.Parent = topBar
+
+local minimizeButton = Instance.new("TextButton")
+minimizeButton.Size = UDim2.new(0, 30, 0, 30)
+minimizeButton.Position = UDim2.new(1, -90, 0.5, -15)
+minimizeButton.BackgroundTransparency = 1
+minimizeButton.Text = "-"
+minimizeButton.TextColor3 = Color3.fromRGB(50, 50, 50)
+minimizeButton.Font = Enum.Font.SourceSans
+minimizeButton.TextSize = 20
+minimizeButton.BorderSizePixel = 0
+minimizeButton.Parent = topBar
+
+minimizeButton.MouseButton1Click:Connect(function()
+    mainFrame.Visible = false
+end)
+
+local maximizeButton = Instance.new("TextButton")
+maximizeButton.Size = UDim2.new(0, 30, 0, 30)
+maximizeButton.Position = UDim2.new(1, -60, 0.5, -15)
+maximizeButton.BackgroundTransparency = 1
+maximizeButton.Text = "Mini"
+maximizeButton.TextColor3 = Color3.fromRGB(50, 50, 50)
+maximizeButton.Font = Enum.Font.SourceSans
+maximizeButton.TextSize = 18
+maximizeButton.BorderSizePixel = 0
+maximizeButton.Parent = topBar
+
+maximizeButton.MouseButton1Click:Connect(function()
+    print("Maximize button clicked (disabled).")
+end)
+
+local closeButton = Instance.new("TextButton")
+closeButton.Size = UDim2.new(0, 30, 0, 30)
+closeButton.Position = UDim2.new(1, -30, 0.5, -15)
+closeButton.BackgroundTransparency = 1
+closeButton.Text = "X"
+closeButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+closeButton.Font = Enum.Font.SourceSans
+closeButton.TextSize = 18
+closeButton.BorderSizePixel = 0
+closeButton.Parent = topBar
+
+closeButton.MouseButton1Click:Connect(function()
+    screenGui:Destroy()
+end)
+
+local inputFrame = Instance.new("ScrollingFrame")
+inputFrame.Size = UDim2.new(1, -20, 0, 180)
+inputFrame.Position = UDim2.new(0, 10, 0, 50)
+inputFrame.BackgroundColor3 = Color3.fromRGB(245, 245, 245)
+inputFrame.BorderSizePixel = 0
+inputFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
+inputFrame.ScrollBarThickness = 5
+inputFrame.ScrollBarImageTransparency = 1
+inputFrame.Parent = mainFrame
+
+local lineFrame = Instance.new("Frame")
+lineFrame.Size = UDim2.new(0, 50, 1, 0)
+lineFrame.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
+lineFrame.BorderSizePixel = 0
+lineFrame.Parent = inputFrame
+
+local scriptBox = Instance.new("TextBox")
+scriptBox.Size = UDim2.new(1, -60, 1, 0)
+scriptBox.Position = UDim2.new(0, 60, 0, 0)
+scriptBox.BackgroundTransparency = 1
+scriptBox.Text = ""
+scriptBox.TextColor3 = Color3.fromRGB(50, 50, 50)
+scriptBox.TextSize = 16
+scriptBox.Font = Enum.Font.Code
+scriptBox.TextXAlignment = Enum.TextXAlignment.Left
+scriptBox.TextYAlignment = Enum.TextYAlignment.Top
+scriptBox.ClearTextOnFocus = false
+scriptBox.MultiLine = true
+scriptBox.TextWrapped = true
+scriptBox.TextEditable = true
+scriptBox.Parent = inputFrame
+
+local lineNumbers = Instance.new("TextLabel")
+lineNumbers.Size = UDim2.new(1, -10, 1, 0)
+lineNumbers.BackgroundTransparency = 1
+lineNumbers.Text = "1"
+lineNumbers.Font = Enum.Font.Code
+lineNumbers.TextSize = 16
+lineNumbers.TextColor3 = Color3.fromRGB(150, 150, 150)
+lineNumbers.TextXAlignment = Enum.TextXAlignment.Right
+lineNumbers.TextYAlignment = Enum.TextYAlignment.Top
+lineNumbers.Position = UDim2.new(0, 10, 0, 0)
+lineNumbers.Parent = lineFrame
+
+scriptBox:GetPropertyChangedSignal("Text"):Connect(function()
+    local lines = scriptBox.Text:split("\n")
+    local lineText = ""
+    for i = 1, #lines do
+        lineText = lineText .. tostring(i) .. "\n"
+    end
+    lineNumbers.Text = lineText
+
+    inputFrame.CanvasSize = UDim2.new(0, 0, 0, #lines * 20)
+end)
+
+local buttonFrame = Instance.new("Frame")
+buttonFrame.Size = UDim2.new(1, -20, 0, 50)
+buttonFrame.Position = UDim2.new(0, 10, 0, 240)
+buttonFrame.BackgroundTransparency = 1
+buttonFrame.Parent = mainFrame
+
+local buttonNames = {"Execute", "Clear", "inject"}
+for i, name in ipairs(buttonNames) do
+    local button = Instance.new("TextButton")
+    button.Size = UDim2.new(0, 100, 1, 0)
+    button.Position = UDim2.new(0, (i - 1) * 110, 0, 0)
+    button.BackgroundColor3 = Color3.fromRGB(220, 220, 220)
+    button.Text = name
+    button.TextColor3 = Color3.fromRGB(0, 0, 0)
+    button.Font = Enum.Font.SourceSansBold
+    button.TextSize = 18
+    button.BorderSizePixel = 0
+    button.Parent = buttonFrame
+
+    if name == "Execute" then
+        button.MouseButton1Click:Connect(function()
+            local scriptText = scriptBox.Text
+            local success, err = pcall(function()
+                local func = loadstring(scriptText)
+                if func then
+                    func()
+                else
+                    error("Script could not be loaded.")
+                end
+            end)
+            if not success then warn("Error: " .. err) end
+        end)
+    elseif name == "Clear" then
+        button.MouseButton1Click:Connect(function()
+            scriptBox.Text = ""
+        end)
+    elseif name == "inject" then
+        button.MouseButton1Click:Connect(function()
+            local scriptText = scriptBox.Text
+            if scriptText and scriptText ~= "" then
+                game.ReplicatedStorage.RemoteEvent:FireServer(scriptText)
+            else
+                warn("No script provided to inject.")
+            end
+        end)
+    end
+end
+end)
+VsecondSection:NewButton("Fe Hax Gui", "ButtonInfo", function()
+    loadstring(game:HttpGetAsync("https://pastebin.com/raw/Kcj0J4wb"))()
+end)
